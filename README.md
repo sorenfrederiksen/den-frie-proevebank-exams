@@ -1,8 +1,8 @@
-![Create another logo for Den Frie Prøvebank, featuring the same happy young blonde man from earlier. This time, he's standing in the middle of a cobbled street in Copenhagen, ecstatic, throwing papers at passing cyclists, who are catching them with glee.](./assets/alt-logo-top.png)
+![A screenshot of the Den Frie Prøvebank website](./assets/site.png)
 
 # Den Frie Prøvebank
 
-_Den Frie Prøvebank_, or "The Free Test Bank," is an archive of free, AI-generated practice exams for those learning Danish as a second language.
+[_Den Frie Prøvebank_](https://den-frie-provebank.dk/), or "The Free Test Bank," is an archive of free, AI-generated practice exams for those learning Danish as a second language.
 
 To begin with, _Den Frie Prøvebank_ has focussed on _Studieprøven_, the highest level official test of proficiency in Danish as a second language.
 
@@ -17,9 +17,9 @@ To begin with, _Den Frie Prøvebank_ has focussed on _Studieprøven_, the highes
 -----
 ## Get the tests
 
-_To come._
+Our archive of practice exams are freely available at [den-frie-provebank.dk](https://den-frie-provebank.dk/)
 
-![](./assets/alt-logo-bottom.png)
+![](./assets/oersteds-parken-half.png)
 
 ## Frequently-Asked Questions
 
