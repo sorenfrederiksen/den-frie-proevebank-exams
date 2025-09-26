@@ -8,13 +8,33 @@ document_title: Prøve i Dansk 2 - Practice Test 8
   <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png" />
 </div>
 
+<div class="columns">
+
+<div class="column">
+
 ## Outline
 
-- Læseforståelse (90 minutter)
-  - Delprøve 1
-  - Delprøve 2
-- Skriftlig fremstilling (90 minutter)
-- Mundtlig kommunikation (20 minutter)
+- Læseforståelse (90 minutter)
+  - Delprøve 1
+  - Delprøve 2
+- Skriftlig fremstilling (90 minutter)
+- Mundtlig kommunikation (20 minutter)
+
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
 
 <hr class="front-page-line"/>
 

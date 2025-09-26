@@ -8,6 +8,10 @@ document_title: Prøve i Dansk 3 - Practice Test 1
   <img class="logo" src="../../../assets/kongens-have-line-drawing.png" />
 </div>
 
+<div class="columns">
+
+<div class="column">
+
 ## Outline
 
 - Læseforståelse (90 minutter)
@@ -17,6 +21,22 @@ document_title: Prøve i Dansk 3 - Practice Test 1
   - Delprøve 3
 - Skriftlig fremstilling (2,5 timer)
 - Mundtlig kommunikation (20 minutter)
+
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
 
 <hr class="front-page-line"/>
 

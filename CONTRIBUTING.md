@@ -1,3 +1,5 @@
+![](./assets/oersteds-parken-half.png)
+
 # Contributing to Den Frie Prøvebank
 
 Thank you for your interest in contributing to _Den Frie Prøvebank_! 
@@ -10,9 +12,6 @@ This document is focused on helping you report errors or issues with our exam pa
 - [How to File an Issue](#how-to-file-an-issue)
 - [Tips for Writing a Good Issue](#tips-for-writing-a-good-issue)
 - [Code of Conduct](#code-of-conduct)
-
-
-![](./assets/oersteds-parken-half.png)
 
 ## Creating a GitHub Account
 

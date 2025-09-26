@@ -7,6 +7,10 @@ document_title: Studieprøven - Practice Test 9
   <img class="logo" src="../../../assets/logo-line-drawing-white.png" />
 </div>
 
+<div class="columns">
+
+<div class="column">
+
 ## Outline
 
 - Læseforståelse (90 minutter)
@@ -16,6 +20,23 @@ document_title: Studieprøven - Practice Test 9
   - Delprøve 3
 - Skriftlig fremstilling (3 timer)
 - Mundtlig kommunikation (30 minutter)
+
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+
+</div>
+</div>
 
 <hr class="front-page-line"/>
 

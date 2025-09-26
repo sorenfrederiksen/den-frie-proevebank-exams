@@ -1,0 +1,562 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom-width: 3px;
+  border-color: var(--color-front-page-red);
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="studieprøven-test-2---svarark">Studieprøven <em>Test 2 - Svarark</em></h1>
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1---svar-25-minutter">Delprøve 1 - Svar (25 minutter)</h3>
+<h4 id="spørgsmål-til-tekstsamlingen-innovation-og-teknologi-i-danmark">Spørgsmål til tekstsamlingen: Innovation og teknologi i Danmark</h4>
+<ol>
+<li><p><strong>Hvor stor en andel af verdens insulin producerer Novo Nordisk?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 50%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange milliarder kroner har Novo Nordisk investeret i forskning siden 2020?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 18 milliarder kroner</li>
+</ul>
+</li>
+<li><p><strong>Med hvor mange procent har AI reduceret fejldiagnoser på danske hospitaler?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 25%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange procent af konsultationer foregår nu digitalt?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 40%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange millioner aktive brugere har MobilePay?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 4,2 millioner</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange transaktioner behandler MobilePay årligt?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 1 milliard transaktioner</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange nye tech-job har finanssektoren skabt siden 2019?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 15.000</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange metanol-drevne containerskibe har Maersk bestilt?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 19</li>
+</ul>
+</li>
+<li><p><strong>Hvor stor en andel af det globale marked for vindmølle-installationsskibe har danske værfter?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 70%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange milliarder kroner investerer shipping-industrien i grønne teknologier?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 50 milliarder kroner</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange robotter har Universal Robots solgt på verdensplan?</strong></p>
+<ul>
+<li><strong>Svar:</strong> Over 50.000</li>
+</ul>
+</li>
+<li><p><strong>Med hvor mange procent har robotteknologi øget produktiviteten i fremstillingsindustrien?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 35%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange medarbejdere beskæftiger IO Interactive?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 400</li>
+</ul>
+</li>
+<li><p><strong>Med hvor mange procent vokser den danske gaming-industri årligt?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 15%</li>
+</ul>
+</li>
+<li><p><strong>Hvor mange indie-spil har Copenhagen Game Collective produceret siden 2018?</strong></p>
+<ul>
+<li><strong>Svar:</strong> 50</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="delprøve-2a---svar">Delprøve 2A - Svar</h3>
+<h4 id="fjernede-afsnit---korrekte-svar">Fjernede afsnit - Korrekte svar:</h4>
+<p><strong>Afsnit 1:</strong> <strong>B</strong> - Forskere forudser, at situationen vil forværres betydeligt de kommende årtier. Nedbørsmængderne vil blive mere uforudsigelige, og ekstremvejr vil optræde hyppigere og med større intensitet end tidligere.</p>
+<ul>
+<li><em>Rationale: Dette afsnit giver den videnskabelige baggrund for, hvorfor byerne skal tilpasse sig, og leder naturligt til Københavns konkrete tiltag.</em></li>
+</ul>
+<p><strong>Afsnit 2:</strong> <strong>B</strong> - Teknologiske innovationer driver udviklingen frem. Sensorer og dataanalyse gør det muligt at forudsige og håndtere vejrbegivenheder mere effektivt end nogensinde før.</p>
+<ul>
+<li><em>Rationale: Efter beskrivelsen af Københavns investeringer introducerer dette afsnit den teknologiske dimension, der understøtter løsningerne.</em></li>
+</ul>
+<p><strong>Afsnit 3:</strong> <strong>C</strong> - Erhvervslivet ser klimatilpasning som en vækstmulighed. Lokale virksomheder har specialiseret sig i udvikling og produktion af klimateknologi, hvilket skaber arbejdspladser og eksportindtægter.</p>
+<ul>
+<li><em>Rationale: Dette bygger på Aarhus' innovative løsninger og viser, hvordan de skaber økonomiske muligheder.</em></li>
+</ul>
+<p><strong>Afsnit 4:</strong> <strong>A</strong> - Andre danske byer følger nu Aalborgs eksempel med naturbaserede løsninger. Esbjerg og Vejle har iværksat lignende projekter for at beskytte sig mod stigende havniveau.</p>
+<ul>
+<li><em>Rationale: Dette viser spredningen af Aalborgs kystsikringsmetoder til andre kystbyer.</em></li>
+</ul>
+<p><strong>Afsnit 5:</strong> <strong>C</strong> - Succesen skaber forpligtelser over for andre lande. Danmark skal nu hjælpe udviklingslande med at implementere lignende løsninger og dele viden om bæredygtig byudvikling.</p>
+<ul>
+<li><em>Rationale: Efter beskrivelsen af Odenses tiltag og den internationale anerkendelse passer dette som konklusion om Danmarks globale ansvar.</em></li>
+</ul>
+<hr>
+<h3 id="delprøve-2b---svar">Delprøve 2B - Svar</h3>
+<h4 id="spørgsmål-til-teksten-fremtidens-velfærdsstat-i-danmark">Spørgsmål til teksten: Fremtidens velfærdsstat i Danmark</h4>
+<ol>
+<li><p><strong>Hvor mange danskere over 67 år forventes der at være i 2040?</strong></p>
+<ul>
+<li><strong>Svar: B</strong> - 1,5 millioner</li>
+<li><em>Fra teksten: "I 2040 vil der være 1,5 millioner danskere over 67 år"</em></li>
+</ul>
+</li>
+<li><p><strong>Hvad er det grundlæggende problem med den demografiske udvikling for velfærdsstaten?</strong></p>
+<ul>
+<li><strong>Svar: B</strong> - Færre arbejdende skal finansiere velfærd til flere pensionister</li>
+<li><em>Fra teksten: "færre arbejdende skal finansiere velfærd til flere pensionister og skaber et grundlæggende problem"</em></li>
+</ul>
+</li>
+<li><p><strong>Hvordan kan teknologien potentielt hjælpe velfærdsstaten ifølge teksten?</strong></p>
+<ul>
+<li><strong>Svar: B</strong> - Ved at forbedre effektiviteten i den offentlige sektor</li>
+<li><em>Fra teksten: "teknologien også forbedre effektiviteten i den offentlige sektor og reducere omkostningerne"</em></li>
+</ul>
+</li>
+<li><p><strong>Hvilken udfordring skaber globaliseringen for den danske velfærdsmodel?</strong></p>
+<ul>
+<li><strong>Svar: A</strong> - Pres for at sænke skatter og sociale ydelser på grund af international konkurrence</li>
+<li><em>Fra teksten: "International konkurrence... skaber også et pres for at sænke skatter og sociale ydelser"</em></li>
+</ul>
+</li>
+<li><p><strong>Hvad karakteriserer forskellen mellem generationernes forventninger til velfærdsstaten?</strong></p>
+<ul>
+<li><strong>Svar: C</strong> - Yngre ønsker fleksible services, ældre prioriterer stabilitet</li>
+<li><em>Fra teksten: "Yngre generationer ønsker mere fleksible og personaliserede... ældre generationer prioriterer stabilitet og tryghed"</em></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="delprøve-3---svar">Delprøve 3 - Svar</h3>
+<h4 id="tekst-med-fjernede-ord-den-danske-fødevareindustris-globale-ambitioner">Tekst med fjernede ord: Den danske fødevareindustris globale ambitioner</h4>
+<ol>
+<li><p><strong>transformeret</strong> (D) - "Danmarks fødevareindustri har transformeret sig fra en primært hjemmemarkedsorienteret sektor"</p>
+<ul>
+<li><em>Kontekst: En fundamental ændring fra lokal til global orientering</em></li>
+</ul>
+</li>
+<li><p><strong>global</strong> (B) - "til en global eksportvirksomhed"</p>
+<ul>
+<li><em>Kontekst: Beskriver den internationale karakter af industrien</em></li>
+</ul>
+</li>
+<li><p><strong>over</strong> (B) - "til markeder over hele verden"</p>
+<ul>
+<li><em>Kontekst: Præposition der beskriver geografisk udbredelse</em></li>
+</ul>
+</li>
+<li><p><strong>skabt</strong> (A) - "Danske virksomheder... har skabt globale brands"</p>
+<ul>
+<li><em>Kontekst: Virksomhederne har opbygget/etableret brands fra bunden</em></li>
+</ul>
+</li>
+<li><p><strong>ekspanderet</strong> (C) - "Arla har ekspanderet på markeder i Asien og Mellemøsten"</p>
+<ul>
+<li><em>Kontekst: Udvidelse til nye geografiske markeder</em></li>
+</ul>
+</li>
+<li><p><strong>hurtigt</strong> (A) - "hvor efterspørgslen efter højkvalitets mejeriprodukter vokser hurtigt"</p>
+<ul>
+<li><em>Kontekst: Beskriver hastigheden af markedsvækst</em></li>
+</ul>
+</li>
+<li><p><strong>elementer</strong> (B) - "Kvalitet og bæredygtighed er blevet centrale elementer i markedsføring"</p>
+<ul>
+<li><em>Kontekst: Grundlæggende bestanddele af markedsføringsstrategien</em></li>
+</ul>
+</li>
+<li><p><strong>forbinder</strong> (A) - "Forbrugere internationalt forbinder danske produkter med høje standarder"</p>
+<ul>
+<li><em>Kontekst: Mental association mellem Danmark og kvalitet</em></li>
+</ul>
+</li>
+<li><p><strong>stærk</strong> (B) - "Dette giver danske virksomheder en stærk position på premium-segmenterne"</p>
+<ul>
+<li><em>Kontekst: Beskriver konkurrencemæssig fordel</em></li>
+</ul>
+</li>
+<li><p><strong>udvikler</strong> (B) - "Danske virksomheder udvikler nye produkter"</p>
+<ul>
+<li><em>Kontekst: Skabelse af innovative fødevareprodukter</em></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="skriftlig-fremstilling">Skriftlig fremstilling</h2>
+<p><strong>Note:</strong> De skriftlige opgaver har ikke entydige "korrekte" svar, da de kræver subjektiv analyse, argumentation og vurdering. Bedømmelsen vil fokusere på:</p>
+<ul>
+<li>Sproglig korrekthed og stilistisk variation</li>
+<li>Tekststruktur og logisk sammenhæng</li>
+<li>Analyse af grafisk materiale</li>
+<li>Argumentation og nuanceret perspektivering</li>
+<li>Faglig dybde og relevans</li>
+</ul>
+<p><strong>Eksempel på struktur for Opgave 1 (Ungdomsarbejdsløshed):</strong></p>
+<ol>
+<li><strong>Indledning</strong> - Præsentation af problemets omfang</li>
+<li><strong>Dataanalyse</strong> - Gennemgang af tallene fra nordiske vs. sydeuropæiske lande</li>
+<li><strong>Årsagsforklaring</strong> - Uddannelsessystemer, arbejdsmarkedsreformer, økonomiske strukturer</li>
+<li><strong>Konsekvensanalyse</strong> - Langsigtede effekter på individ og samfund</li>
+<li><strong>Løsningsforslag</strong> - Erhvervspraktik, støtteprogrammer, strukturreformer</li>
+<li><strong>Konklusion</strong> - Sammenfatning og fremtidsperspektiver</li>
+</ol>
+<hr>
+<h2 id="mundtlig-kommunikation">Mundtlig kommunikation</h2>
+<p><strong>Note:</strong> Den mundtlige del bedømmes på præstation og har ikke foruddefinerede "korrekte" svar.</p>
+<p><strong>Bedømmelsesområder:</strong></p>
+<ul>
+<li><strong>Sproglig færdighed</strong> - Flydende udtryk, korrekt grammatik, rigt ordforråd</li>
+<li><strong>Kommunikativ kompetence</strong> - Klar formidling og struktureret fremstilling</li>
+<li><strong>Indholdsrigdom</strong> - Nuanceret forståelse og faglig indsigt</li>
+<li><strong>Præsentationsteknik</strong> - Logisk opbygning og engagerende formidling</li>
+<li><strong>Interaktionsevne</strong> - Naturlig dialog og responsiv kommunikation</li>
+</ul>
+<p><strong>Eksempel på struktur for Emne 1 (Fremtidens arbejdsliv):</strong></p>
+<ol>
+<li><strong>Introduktion</strong> - Arbejdsmarkedets transformation i den digitale tidsalder</li>
+<li><strong>Teknologiske ændringer</strong> - Automatisering, AI og remote work</li>
+<li><strong>Work-life balance</strong> - Fleksibilitet vs. arbejdstryg og mental sundhed</li>
+<li><strong>Sociale konsekvenser</strong> - Generationskløfter og nye arbejdsformer</li>
+<li><strong>Fremtidige løsninger</strong> - Policy-initiativer og virksomhedstilpasning</li>
+<li><strong>Perspektivering</strong> - Danmarks position i global sammenhæng</li>
+</ol>
+<hr>
+<p><em>Dette svarark indeholder de faktuelle svar fra testteksterne. For de diskursive dele (skriftlig og mundtlig kommunikation) gives vejledende strukturer, da disse bedømmes på kvaliteten af sproglig udførelse, argumentation og kommunikativ kompetence frem for specifikke "korrekte" svar.</em></p>
+
+	
+
+</body></html>
