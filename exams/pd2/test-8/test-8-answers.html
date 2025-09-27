@@ -1,0 +1,544 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="pd2-test-8---svarark">PD2 <em>Test 8 - Svarark</em></h1>
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1--opgave-1">Delprøve&nbsp;1 – Opgave&nbsp;1</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Hvornår lukker Mælkevejens Bibliotek om søndagen?</td>
+<td>Kl.&nbsp;16.00.</td>
+</tr>
+<tr>
+<td>2. Hvor meget koster et voksenmedlemskab af Mælkevejens Bibliotek om året?</td>
+<td>300&nbsp;kr. om året.</td>
+</tr>
+<tr>
+<td>3. På hvilke dage og tidspunkter mødes Karrierehjørnet?</td>
+<td>Mandag og onsdag kl.&nbsp;16.00–18.00.</td>
+</tr>
+<tr>
+<td>4. Hvor mange liter vand kan man spare ved at tage et fem minutters bad i stedet for et ti minutters bad?</td>
+<td>Cirka 50&nbsp;liter.</td>
+</tr>
+<tr>
+<td>5. Hvad er minimumstiden, en mentor skal afsætte pr. uge i Mentornet‑programmet?</td>
+<td>Mindst to timer pr. uge.</td>
+</tr>
+<tr>
+<td>6. Hvilken aldersgruppe hjælper Mentornet mentorprogrammet?</td>
+<td>Unge flygtninge på 15–25&nbsp;år.</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h3 id="delprøve-1--opgave-2-multiple-matching">Delprøve&nbsp;1 – Opgave&nbsp;2 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Sætning</th>
+<th>Rigtigt bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Jeg vil gerne vide, hvornår sommermarkedet slutter.</td>
+<td><strong>C</strong> (Sommermarked)</td>
+</tr>
+<tr>
+<td>2. Jeg leder efter et deltidsjob i en café.</td>
+<td><strong>G</strong> (Barista til café)</td>
+</tr>
+<tr>
+<td>3. Jeg skal leje en stand til 100&nbsp;kr.</td>
+<td><strong>C</strong> (Sommermarked)</td>
+</tr>
+<tr>
+<td>4. Min hund er væk. Hvor skal jeg henvende mig?</td>
+<td><strong>E</strong> (Hund fundet)</td>
+</tr>
+<tr>
+<td>5. Jeg søger en plads i et bofællesskab uden husdyr.</td>
+<td><strong>A</strong> (Bofællesskab søger beboer)</td>
+</tr>
+<tr>
+<td>6. Jeg vil høre et gratis foredrag om vejret.</td>
+<td><strong>B</strong> (Gratis foredrag)</td>
+</tr>
+<tr>
+<td>7. Jeg vil gerne strikke sammen med andre.</td>
+<td><strong>I</strong> (Strikkeklub)</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2--opgave-3-huludfyldning-med-ord">Delprøve&nbsp;2 – Opgave&nbsp;3 (Huludfyldning med ord)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt ord</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>venner</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>kolde</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>kommunikere</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>byen</td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>kiosk</td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>(7)</td>
+<td>modig</td>
+</tr>
+<tr>
+<td>(8)</td>
+<td>interesse</td>
+</tr>
+<tr>
+<td>(9)</td>
+<td>bo</td>
+</tr>
+</tbody></table>
+<p>Distraktorord (ikke brugt): ringe, kærlighed, unge, triste, naboer.</p>
+<div class="spacer"></div>
+
+<h3 id="delprøve-2--opgave-4-huludfyldning-med-sætninger">Delprøve&nbsp;2 – Opgave&nbsp;4 (Huludfyldning med sætninger)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt sætning</th>
+<th>Bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>Han havde sparet op i flere år for at få råd til udstyr og husleje.</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>Hans venner hjalp med at male væggene og indrette det lille lokale.</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>Det var hårdt at stå op kl.&nbsp;4 hver morgen, men kunderne satte pris på de varme rundstykker.</td>
+<td><strong>C</strong></td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>Emil donerede brød, som ikke blev solgt, til det lokale herberg.</td>
+<td><strong>E</strong></td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>Han blev overrasket, da han vandt førsteprisen for bedste rugbrød i en konkurrence.</td>
+<td><strong>F</strong></td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>Historien om hans succes inspirerede andre unge til at følge deres drømme.</td>
+<td><strong>G</strong></td>
+</tr>
+</tbody></table>
+<p>Distraktorer: <strong>D</strong> (Han solgte også kaffe, så de forbipasserende kunne tage en kop med på arbejde) og <strong>H</strong> (Selv når der var stille i butikken, øvede han sig på nye opskrifter og teknikker).</p>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2--opgave-5-multiple-matching">Delprøve&nbsp;2 – Opgave&nbsp;5 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. I hvilket afsnit beskrives Majas familieliv?</td>
+<td><strong>Afsnit&nbsp;A</strong> (bor i Odense med kæresten og hunden)</td>
+</tr>
+<tr>
+<td>2. Hvad fik Maja til at skifte fra farmaci til miljøarbejde?</td>
+<td><strong>Afsnit&nbsp;B</strong> (frivilligt træplantningsprojekt)</td>
+</tr>
+<tr>
+<td>3. Hvor mange personer arbejder der nu i “Grønt Fællesskab”?</td>
+<td><strong>Afsnit&nbsp;D</strong> (fem ansatte)</td>
+</tr>
+<tr>
+<td>4. Hvad er en af de største udfordringer i Majas arbejde?</td>
+<td><strong>Afsnit&nbsp;E</strong> (overbevise travle familier om at finde tid)</td>
+</tr>
+<tr>
+<td>5. Hvad laver Maja i sin fritid?</td>
+<td><strong>Afsnit&nbsp;F</strong> (går ture med hunden, dyrker yoga, læser om natur, bager)</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h2 id="skriftlig-fremstilling-delprøve-1-og-delprøve-2">Skriftlig fremstilling (Delprøve&nbsp;1 og Delprøve&nbsp;2)</h2>
+<p>Ingen entydige facit – besvarelserne vurderes efter:</p>
+<ul>
+<li>Opfyldelse af indholdspunkter og omfanget (150–200&nbsp;ord i Delprøve&nbsp;1; mindst 100&nbsp;ord i Delprøve&nbsp;2)</li>
+<li>Sammenhæng, klar struktur og passende længde</li>
+<li>Sproglig korrekthed (grammatik, ordforråd, stavning)</li>
+<li>Passende stil og register (halvformel i klage/opslag; uformel i e‑mail)</li>
+</ul>
+<p>En god besvarelse bør adressere alle de nævnte punkter, holde en venlig tone og anvende høflige formuleringer. Den personlige e‑mail skal indeholde en hilsen, beskrive kursusforløbet, hvad du lærte, og opfordre den tidligere kursist til at tilmelde sig.</p>
+<div class="spacer"></div>
+
+<h2 id="mundtlig-kommunikation">Mundtlig kommunikation</h2>
+<p>Der findes ingen facit – præstationen bedømmes på:</p>
+<ul>
+<li>Sikkerhed i sprogbrug (udtale, grammatik, ordforråd)</li>
+<li>Relevans og dybde i indholdet</li>
+<li>Struktur og sammenhæng i præsentation og dialog</li>
+<li>Interaktion og evne til at stille og besvare spørgsmål</li>
+</ul>
+<p>Den mundtlige del kræver, at prøvedeltageren kan præsentere et kendt emne, beskrive og diskutere billeder samt deltage aktivt i samtalen.</p>
+
+	
+
+</body></html>

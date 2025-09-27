@@ -84,24 +84,21 @@ li::marker {
   width: 100%;
   overflow-block: hidden;
   border-block: 4px var(--color-front-page-red) solid;
-  background-image: url('../../../assets/logo-line-drawing-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 100%;
-  aspect-ratio: 1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .front-page-line {
   margin-top: 24px;
-  border-bottom-width: 3px;
-  border-color: var(--color-front-page-red);
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
 }
 
 .columns {
@@ -161,6 +158,49 @@ img {
 .topic-picture {
   height: 350px;
   margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
 }/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -282,19 +322,39 @@ code.hljs {
 	<body class="">
 		<h1 id="prøve-i-dansk-2-practice-test-6">Prøve i Dansk&nbsp;2 <em>Practice Test 6</em></h1>
 <div class="logo-wrapper">
-  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png" />
+  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png">
 </div>
+
+<div class="columns">
+
+<div class="column">
 
 <h2 id="outline">Outline</h2>
 <ul>
-<li>Læseforståelse (90&nbsp;minutter)<ul>
-<li>Delprøve&nbsp;1</li>
-<li>Delprøve&nbsp;2</li>
+<li>Læseforståelse (90 minutter)<ul>
+<li>Delprøve 1</li>
+<li>Delprøve 2</li>
 </ul>
 </li>
-<li>Skriftlig fremstilling (90&nbsp;minutter)</li>
-<li>Mundtlig kommunikation (20&nbsp;minutter)</li>
+<li>Skriftlig fremstilling (90 minutter)</li>
+<li>Mundtlig kommunikation (20 minutter)</li>
 </ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
+
 <hr class="front-page-line">
 
 <p><em>Denne øveprøve er udarbejdet af Den Frie Prøvebank og er uofficiel. Den Frie Prøvebank har begrænset mulighed for at validere, hvor godt prøven matcher de officielle prøver med hensyn til indhold og struktur. Brugere bør søge vejledning hos officielle uddannelsesinstitutioner om eksamensform og -indhold.</em></p>
@@ -305,7 +365,7 @@ code.hljs {
 <p><strong>Ingen hjælpemidler tilladt</strong></p>
 <h4 id="opgave-1">Opgave&nbsp;1</h4>
 <p>Nedenfor finder du fire opslagstekster (A–D) fra brochurer, pjecer og hjemmesider. I alt er der omkring 2.000 ord. Læs dem alle grundigt. Der er seks spørgsmål til teksterne.</p>
-<p><strong>Tekst&nbsp;A: Din kommune’s kultur- og fritidscenter “Liv&nbsp;&amp;&nbsp;Bevægelse” – et sted for alle</strong>  </p>
+<p><strong>Tekst&nbsp;A: Din kommunes kultur- og fritidscenter “Liv&nbsp;&amp;&nbsp;Bevægelse” – et sted for alle</strong>  </p>
 <p>I hjertet af byen ligger kultur- og fritidscenteret “Liv&nbsp;&amp;&nbsp;Bevægelse”, som siden åbningen i 2005 har været samlingssted for borgere i alle aldre. Huset er blevet udvidet flere gange og rummer i dag et moderne fitnesscenter med nye maskiner, et svømmebassin, sauna, en lys café samt flere sale til forskellige aktiviteter. I stueetagen finder du et åbent træningsområde og en 25‑meters pool, hvor der tilbydes svømmeundervisning for børn og aquafitness for voksne. På første sal er der sale til yoga, dans, badminton og bordtennis, samt et legeområde til de mindste, hvor børnene kan tegne, læse eller bygge med klodser, mens forældrene træner.  </p>
 <p>Centret tilbyder et bredt program af kurser og hold: crossfit om morgenen, pilates i frokostpausen, zumba efter arbejde, seniormotion om formiddagen og familieaktiviteter i weekenden. Alle hold ledes af uddannede instruktører, og der er plads til både begyndere og øvede. Hvis du vil træne på egen hånd, kan du bruge det veludstyrede fitnessrum med løbebånd, vægte og spinningcykler.  </p>
 <p>Kultur‑ og fritidscenteret er åbent fra kl.&nbsp;7.00–22.00 mandag til torsdag, fredag til kl.&nbsp;20.00, lørdag til kl.&nbsp;18.00 og søndag til kl.&nbsp;16.00. På helligdage er der lukket. Medlemskab koster 600&nbsp;kr. for et halvt år og giver ubegrænset adgang til alle faciliteter og hold. Dagsbillet koster 60&nbsp;kr. Rabatter gives til studerende og pensionister, der betaler halv pris, mens børn under 12 år har gratis adgang i følge med en voksen. Medlemskortet fungerer også som nøgle til garderober og skabe.  </p>
@@ -602,9 +662,9 @@ code.hljs {
 <li><strong>Emne&nbsp;A: Biblioteker og digitalisering</strong></li>
 </ul>
 <p>Byrådet overvejer at reducere åbningstiderne i de fysiske biblioteker for at investere mere i digitale tilbud. Diskutér fordele og ulemper for borgerne, og kom med forslag til, hvordan man kan sikre adgang til bøger og viden for alle, også dem der ikke er fortrolige med teknologi.</p>
-<img alt="Billede&nbsp;1 viser mennesker, der sidder på et bibliotek og læser bøger ved borde." src="./practice-6-grafik-1.webp" class="topic-picture">
+<img alt="Billede&nbsp;1 viser mennesker, der sidder på et bibliotek og læser bøger ved borde." src="./test-6-grafik-1.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser en person derhjemme, som læser på en tablet eller e‑bogslæser." src="./practice-6-grafik-2.webp" class="topic-picture">
+<img alt="Billede&nbsp;2 viser en person derhjemme, som læser på en tablet eller e‑bogslæser." src="./test-6-grafik-2.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -612,9 +672,9 @@ code.hljs {
 <li><strong>Emne&nbsp;B: Børnepasning og arbejdsliv</strong></li>
 </ul>
 <p>Kommunen overvejer at forkorte åbningstiderne i daginstitutionerne for at spare penge. Diskutér konsekvenserne for børnefamilier og arbejdsgivere, og foreslå løsninger, der balancerer budget og behov, fx fleksible arbejdstider eller alternative pasningsmuligheder.</p>
-<img alt="Billede&nbsp;1 viser børn, der leger med byggeklodser og dukker i en daginstitution." src="./practice-6-grafik-3.webp" class="topic-picture">
+<img alt="Billede&nbsp;1 viser børn, der leger med byggeklodser og dukker i en daginstitution." src="./test-6-grafik-3.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser en forælder, der arbejder ved et køkkenbord med en bærbar computer, mens et barn tegner ved siden af." src="./practice-6-grafik-4.webp" class="topic-picture">
+<img alt="Billede&nbsp;2 viser en forælder, der arbejder ved et køkkenbord med en bærbar computer, mens et barn tegner ved siden af." src="./test-6-grafik-4.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -622,9 +682,9 @@ code.hljs {
 <li><strong>Emne&nbsp;C: Motion og byrum</strong></li>
 </ul>
 <p>Kommunen vil lukke en sportshal for at bygge butikker og parkeringspladser. Diskutér, hvad det betyder for sundhed og fællesskab, og foreslå alternative løsninger, der giver plads til både handel og motion.</p>
-<img alt="Billede&nbsp;1 viser mennesker, der spiller badminton i en indendørshal." src="./practice-6-grafik-5.webp" class="topic-picture">
+<img alt="Billede&nbsp;1 viser mennesker, der spiller badminton i en indendørshal." src="./test-6-grafik-5.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser mennesker, der løber og laver øvelser i en park med træer." src="./practice-6-grafik-6.webp" class="topic-picture">
+<img alt="Billede&nbsp;2 viser mennesker, der løber og laver øvelser i en park med træer." src="./test-6-grafik-6.webp" class="topic-picture">
 
 <hr>
 <p><em>Denne øveprøve er udarbejdet af Den Frie Prøvebank og er uofficiel. Den Frie Prøvebank har begrænset mulighed for at validere, hvor godt prøven matcher de officielle prøver med hensyn til indhold og struktur. Brugere bør søge vejledning hos officielle uddannelsesinstitutioner om eksamensform og -indhold.</em></p>

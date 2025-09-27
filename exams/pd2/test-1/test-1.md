@@ -28,8 +28,9 @@ document_title: Prøve i Dansk 2 - Practice Test 1
 <img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
 
 <p class="qr-code-title" style="font-size: 9px">
-  Help Den Frie Prøvebank
+  Help Den Frie <span>Prøvebank</span>
 </p>
+
 
 </div>
 </div>

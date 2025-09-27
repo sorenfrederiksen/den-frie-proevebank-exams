@@ -84,24 +84,21 @@ li::marker {
   width: 100%;
   overflow-block: hidden;
   border-block: 4px var(--color-front-page-red) solid;
-  background-image: url('../../../assets/logo-line-drawing-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 100%;
-  aspect-ratio: 1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .front-page-line {
   margin-top: 24px;
-  border-bottom-width: 3px;
-  border-color: var(--color-front-page-red);
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
 }
 
 .columns {
@@ -161,6 +158,49 @@ img {
 .topic-picture {
   height: 350px;
   margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
 }/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -282,19 +322,39 @@ code.hljs {
 	<body class="">
 		<h1 id="prøve-i-dansk-2-practice-test-9">Prøve i Dansk&nbsp;2 <em>Practice Test 9</em></h1>
 <div class="logo-wrapper">
-  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png" />
+  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png">
 </div>
+
+<div class="columns">
+
+<div class="column">
 
 <h2 id="outline">Outline</h2>
 <ul>
-<li>Læseforståelse (90 minutter)<ul>
-<li>Delprøve 1</li>
-<li>Delprøve 2</li>
+<li>Læseforståelse (90 minutter)<ul>
+<li>Delprøve 1</li>
+<li>Delprøve 2</li>
 </ul>
 </li>
-<li>Skriftlig fremstilling (90 minutter)</li>
-<li>Mundtlig kommunikation (20 minutter)</li>
+<li>Skriftlig fremstilling (90 minutter)</li>
+<li>Mundtlig kommunikation (20 minutter)</li>
 </ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
+
 <hr class="front-page-line">
 
 <p><em>Denne prøve er udarbejdet af Den&nbsp;Frie&nbsp;Prøvebank og er uofficiel. Den&nbsp;Frie&nbsp;Prøvebank kan ikke garantere, at dens opgaver matcher de officielle prøver fuldstændigt. Søg vejledning hos officielle undervisningsinstitutioner for at få mere information om prøvens struktur og indhold.</em></p>
@@ -314,7 +374,7 @@ code.hljs {
 <p>Der serveres kaffe, te og vand i pausen, og deltagerne er velkomne til at medbringe snacks eller hjemmebag til at dele med de andre. Du behøver ikke at tilmelde dig på forhånd – du dukker bare op. Filmprogrammet offentliggøres en måned i forvejen på bibliotekets hjemmeside og på klubbens Facebook‑side, så du kan se, hvilke film der bliver vist. To gange om året arrangeres der et weekendseminar, hvor man ser tre film over to dage og får besøg af en gæst – en skuespiller, instruktør eller filmanmelder – der fortæller om sit arbejde. Klubben samarbejder med sprogskolen, som opfordrer sine kursister til at komme og lytte til ægte dialog. Der er ingen aldersgrænse, men filmene er typisk for voksne. Der er elevator til salen og handicapvenlige toiletter.</p>
 <p><strong>Tekst&nbsp;C: Affaldssortering og kompost – sådan gør du derhjemme</strong>  </p>
 <p>Hvis du vil være mere bæredygtig i hverdagen, er affaldssortering et godt sted at starte. Kommunens miljøafdeling har udarbejdet en guide til, hvordan du reducerer restaffaldet og omdanner organiske rester til næringsrig kompost. Guiden forklarer, at en gennemsnitlig familie kan mindske sit restaffald med op til 40 %, hvis mad- og haveaffald sorteres separat. Den anbefaler at anskaffe en godkendt kompostbeholder til haven eller en køkkenkompost, hvor du kan lægge grøntsagsskræller, kaffegrums, æggeskaller og visne blomster.  </p>
-<p>Når du sorterer, er det vigtigt at bruge tydeligt mærkede beholdere til plastik, metal, glas, papir og pap. Skyl emballage ren for madrester og tryk luft ud af plastposer, før du smider dem i. Kartoner fra juice og mælk skal til kartonbeholderen, mens ødelagte glas og porcelæn skal på genbrugspladsen. Farligt affald som batterier, kemikalier og elektronik skal afleveres i særlige containere på genbrugsstationen. Papkasser bør foldes sammen for at spare plads, og aviser skal bundtes, så de ikke blæser væk.  </p>
+<p>Når du sorterer, er det vigtigt at bruge tydeligt mærkede beholdere til plastik, metal, glas, papir og pap. Skyl emballage ren for madrester og tryk luft ud af plastikposer, før du smider dem i. Kartoner fra juice og mælk skal til kartonbeholderen, mens ødelagte glas og porcelæn skal på genbrugspladsen. Farligt affald som batterier, kemikalier og elektronik skal afleveres i særlige containere på genbrugsstationen. Papkasser bør foldes sammen for at spare plads, og aviser skal bundtes, så de ikke blæser væk.  </p>
 <p>Guiden fortæller også, at det er en fordel at vende sin kompost en gang om ugen for at tilføre ilt. Efter seks til ni måneder er komposten omdannet til muld, som kan bruges i bede og krukker. På kommunens hjemmeside kan du finde en kalender over gratis kurser i affaldssortering og kompostering, hvor du kan stille spørgsmål til eksperter. Der er også en app, der minder dig om afhentningsdage for de forskellige beholdere. Endelig opfordres borgerne til at dele billeder af deres kompostprojekter på sociale medier for at inspirere andre.</p>
 <p><strong>Tekst&nbsp;D: Nabohjælp – styrk fællesskabet i dit lokalområde</strong>  </p>
 <p>“Nabohjælp” er en platform, der bringer folk i lokalsamfundet sammen for at hjælpe hinanden med praktiske opgaver og sociale aktiviteter. Ideen opstod, da en gruppe beboere i 2016 ville skabe mere tryghed og kontakt i området. På hjemmesiden kan du oprette en profil og vælge, hvilke typer opgaver du ønsker at hjælpe med: handle ind for ældre, gå tur med naboens hund, hente børn i børnehave, passe blomsterne for nogen på ferie eller besøge en ensom pensionist. Der er også mulighed for at starte initiativer som fælles havedage, byttebibliotek eller loppemarked.  </p>
@@ -567,9 +627,9 @@ code.hljs {
 <li><strong>Emne&nbsp;A: Forbrug og bæredygtighed</strong></li>
 </ul>
 <p>Kommunen overvejer at begrænse engangsplastik på markeder og i butikker. Diskutér fordele og ulemper ved dette forslag, og kom med idéer til, hvordan man kan fremme genbrug og reducere affald uden at skabe problemer for handlende og forbrugere.</p>
-<img alt="Billede&nbsp;1 viser et marked med boder, hvor der sælges grøntsager og frugt i genanvendelige net og glas." src="" class="topic-picture">
+<img alt="Billede&nbsp;1 viser et marked med boder, hvor der sælges grøntsager og frugt i genanvendelige net og glas." src="./test-9-grafik-1.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser en familie, der sorterer affald derhjemme og bruger genanvendelige poser og glas." src="" class="topic-picture">
+<img alt="Billede&nbsp;2 viser en familie, der sorterer affald derhjemme og bruger genanvendelige poser og glas." src="./test-9-grafik-2.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -577,9 +637,9 @@ code.hljs {
 <li><strong>Emne&nbsp;B: Digitalisering og fællesskab</strong></li>
 </ul>
 <p>Byens borgerservice vil indføre flere digitale løsninger, så man bestiller pas, læge og boligtilbud via apps. Diskutér, hvordan dette påvirker ældre og mennesker uden digitale færdigheder, og foreslå måder at støtte dem, så alle kan deltage i samfundet.</p>
-<img alt="Billede&nbsp;1 viser en ældre dame, der får hjælp til at bruge en tablet i et bibliotek." src="" class="topic-picture">
+<img alt="Billede&nbsp;1 viser en ældre dame, der får hjælp til at bruge en tablet i et bibliotek." src="./test-9-grafik-3.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser et ungt menneske, der bruger en smartphone til at bestille tid hos lægen via en app." src="" class="topic-picture">
+<img alt="Billede&nbsp;2 viser et ungt menneske, der bruger en smartphone til at bestille tid hos lægen via en app." src="./test-9-grafik-4.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -587,9 +647,9 @@ code.hljs {
 <li><strong>Emne&nbsp;C: Byliv og natur</strong></li>
 </ul>
 <p>Kommunen planlægger at bygge nye boligblokke på et grønt område, hvor folk ofte går ture og dyrker sport. Diskutér, hvad det betyder for sundhed og fællesskab, og foreslå alternative steder til byggeriet eller måder at bevare grønne rum på.</p>
-<img alt="Billede&nbsp;1 viser en gruppe mennesker, der jogger og går ture i et grønt parkområde med træer." src="" class="topic-picture">
+<img alt="Billede&nbsp;1 viser en gruppe mennesker, der jogger og går ture i et grønt parkområde med træer." src="./test-9-grafik-5.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser byggekraner og boligblokke, der er ved at blive opført tæt på et grønt område." src="" class="topic-picture">
+<img alt="Billede&nbsp;2 viser byggekraner og boligblokke, der er ved at blive opført tæt på et grønt område." src="./test-9-grafik-6.webp" class="topic-picture">
 
 <hr>
 <p><em>Denne prøve er udarbejdet af Den&nbsp;Frie&nbsp;Prøvebank og er uofficiel. Den&nbsp;Frie&nbsp;Prøvebank kan ikke garantere, at dens opgaver matcher de officielle prøver fuldstændigt. Søg vejledning hos officielle undervisningsinstitutioner for at få mere information om prøvens struktur og indhold.</em></p>

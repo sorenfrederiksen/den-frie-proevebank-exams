@@ -84,24 +84,21 @@ li::marker {
   width: 100%;
   overflow-block: hidden;
   border-block: 4px var(--color-front-page-red) solid;
-  background-image: url('../../../assets/logo-line-drawing-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 100%;
-  aspect-ratio: 1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .front-page-line {
   margin-top: 24px;
-  border-bottom-width: 3px;
-  border-color: var(--color-front-page-red);
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
 }
 
 .columns {
@@ -161,6 +158,49 @@ img {
 .topic-picture {
   height: 350px;
   margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
 }/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -282,19 +322,39 @@ code.hljs {
 	<body class="">
 		<h1 id="prøve-i-dansk-2-practice-test-7">Prøve i Dansk&nbsp;2 <em>Practice Test 7</em></h1>
 <div class="logo-wrapper">
-  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png" />
+  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png">
 </div>
+
+<div class="columns">
+
+<div class="column">
 
 <h2 id="outline">Outline</h2>
 <ul>
 <li>Læseforståelse (90 minutter)<ul>
-<li>Delprøve&nbsp;1</li>
-<li>Delprøve&nbsp;2</li>
+<li>Delprøve 1</li>
+<li>Delprøve 2</li>
 </ul>
 </li>
 <li>Skriftlig fremstilling (90 minutter)</li>
 <li>Mundtlig kommunikation (20 minutter)</li>
 </ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
+
 <hr class="front-page-line">
 
 <p><em>Denne øveprøve er udarbejdet af Den Frie Prøvebank og er uofficiel. Den Frie Prøvebank har begrænsede muligheder for at vurdere, hvor godt dens prøver matcher de officielle prøver med hensyn til indhold og struktur. Brugere bør søge vejledning hos officielle undervisningsinstitutioner om prøvernes opbygning og indhold.</em></p>
@@ -599,9 +659,9 @@ code.hljs {
 <li><strong>Emne&nbsp;A: Arbejdsliv og fritid</strong></li>
 </ul>
 <p>Mange virksomheder tilbyder nu fleksible arbejdstider og mulighed for at arbejde hjemme. Diskutér fordele og ulemper ved at arbejde hjemme versus at være på kontoret: Hvordan påvirker det familieliv, produktivitet og fritidsaktiviteter? Kom med forslag til, hvordan man kan finde en god balance.</p>
-<img alt="Billede&nbsp;1 viser en person, der arbejder hjemme foran en bærbar computer med en kop kaffe ved siden af." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;1 viser en person, der arbejder hjemme foran en bærbar computer med en kop kaffe ved siden af." src="./test-7-grafik-1.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser en familie, der spiller bold i en park en solrig eftermiddag." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;2 viser en familie, der spiller bold i en park en solrig eftermiddag." src="./test-7-grafik-2.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -609,9 +669,9 @@ code.hljs {
 <li><strong>Emne&nbsp;B: Bolig og bæredygtighed</strong></li>
 </ul>
 <p>Kommunen overvejer at rive gamle boligblokke ned for at bygge moderne energivenlige rækkehuse med solceller og fælles haver. Diskutér fordele og ulemper ved at erstatte gamle boliger med nye: Hvad betyder det for miljø, fællesskab, husleje og byens historie? Foreslå måder, hvorpå man kan bevare kulturarv og samtidig tænke grønt.</p>
-<img alt="Billede&nbsp;1 viser en række slidte boligblokke med graffiti og grønne områder omkring." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;1 viser en række slidte boligblokke med graffiti og grønne områder omkring." src="./test-7-grafik-3.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser et nybygget kvarter med træfacader, store vinduer og solpaneler på taget." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;2 viser et nybygget kvarter med træfacader, store vinduer og solpaneler på taget." src="./test-7-grafik-4.webp" class="topic-picture">
 
 <div class="page-break"></div>
 
@@ -619,9 +679,9 @@ code.hljs {
 <li><strong>Emne&nbsp;C: Teknologi og sociale relationer</strong></li>
 </ul>
 <p>En lokal skole vil indføre en mobilfri politk i skoletiden og i stedet tilbyde brætspil og kreative værksteder i pauserne. Diskutér fordele og ulemper ved at begrænse elevernes brug af smartphones: Hvordan påvirker det deres sociale relationer, koncentration og trivsel? Kom med forslag til, hvordan man kan bruge teknologi på en sund måde.</p>
-<img alt="Billede&nbsp;1 viser en gruppe teenagere, der sidder sammen, men alle kigger ned i deres smartphones." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;1 viser en gruppe teenagere, der sidder sammen, men alle kigger ned i deres smartphones." src="./test-7-grafik-5.webp" class="topic-picture">
 
-<img alt="Billede&nbsp;2 viser to venner, der spiller et brætspil og griner sammen ved et bord." src="(beskrivende tekst – ingen billede genereres)" class="topic-picture">
+<img alt="Billede&nbsp;2 viser to venner, der spiller et brætspil og griner sammen ved et bord." src="./test-7-grafik-6.webp" class="topic-picture">
 
 <hr>
 <p><em>Denne øveprøve er udarbejdet af Den Frie Prøvebank og er uofficiel. Den Frie Prøvebank har begrænsede muligheder for at vurdere, hvor godt dens prøver matcher de officielle prøver med hensyn til indhold og struktur. Brugere bør søge vejledning hos officielle undervisningsinstitutioner om prøvernes opbygning og indhold.</em></p>

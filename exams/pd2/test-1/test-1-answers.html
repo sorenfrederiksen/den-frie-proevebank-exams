@@ -84,24 +84,21 @@ li::marker {
   width: 100%;
   overflow-block: hidden;
   border-block: 4px var(--color-front-page-red) solid;
-  background-image: url('../../../assets/logo-line-drawing-white.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 100%;
-  aspect-ratio: 1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .front-page-line {
   margin-top: 24px;
-  border-bottom-width: 3px;
-  border-color: var(--color-front-page-red);
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
 }
 
 .columns {
@@ -161,6 +158,49 @@ img {
 .topic-picture {
   height: 350px;
   margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
 }/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -426,25 +466,25 @@ code.hljs {
 <tr>
 <td>(3)</td>
 <td>Hver dag var en ny udfordring, men hun elskede at være ude i naturen.</td>
-<td><strong>C</strong></td>
+<td><strong>B</strong></td>
 </tr>
 <tr>
 <td>(4)</td>
 <td>Hun blev imponeret over, hvor disciplineret børnene var i skolen.</td>
-<td><strong>H</strong></td>
+<td><strong>G</strong></td>
 </tr>
 <tr>
 <td>(5)</td>
 <td>Hun savnede ofte sin familie, men videoopkald gjorde afstanden mindre.</td>
-<td><strong>F</strong></td>
+<td><strong>E</strong></td>
 </tr>
 <tr>
 <td>(6)</td>
 <td>Erfaringerne fra hendes rejser gav hende mod til at vælge en ny uddannelse.</td>
-<td><strong>G</strong></td>
+<td><strong>F</strong></td>
 </tr>
 </tbody></table>
-<p>Distraktorerne er sætningerne <strong>B</strong>, <strong>D</strong> og <strong>E</strong>, der ikke anvendes.</p>
+<p>Distraktorerne er sætningerne <strong>C</strong> og <strong>D</strong>, der ikke anvendes.</p>
 <div class="page-break"></div>
 
 <h3 id="delprøve-2--opgave-5-multiple-matching">Delprøve&nbsp;2 – Opgave&nbsp;5 (Multiple matching)</h3>
