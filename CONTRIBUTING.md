@@ -19,9 +19,7 @@ Github is where coders come to share and collaborate on code. It's also the best
 
 If you don't have a GitHub account, you'll need one to report issues. Here's how to create one:
 
-1. **Visit GitHub.com** - Go to <a href="https://github.com">github.com</a>, if you're not already there.
-
-2. **Sign up** - Click the "Sign up" button in the top right corner of the page. Enter all the usual details - email, username, etc.
+1. **Create a free Github account** - Click the "Sign up" button in the top right corner of the page. Enter the usual details - email, username, etc.
 
 3. **Verify your account** - GitHub will send you an email to verify your account. Check your email and click the verification link.
 
