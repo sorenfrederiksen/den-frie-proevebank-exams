@@ -1,0 +1,693 @@
+<!DOCTYPE html><html><head><title>Prøve i Dansk&nbsp;2 - Practice Test 8</title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="prøve-i-dansk-2-practice-test-8">Prøve i Dansk&nbsp;2 <em>Practice Test 8</em></h1>
+<div class="logo-wrapper">
+  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png">
+</div>
+
+<div class="columns">
+
+<div class="column">
+
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Læseforståelse (90 minutter)<ul>
+<li>Delprøve 1</li>
+<li>Delprøve 2</li>
+</ul>
+</li>
+<li>Skriftlig fremstilling (90 minutter)</li>
+<li>Mundtlig kommunikation (20 minutter)</li>
+</ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
+
+<hr class="front-page-line">
+
+<p><em>This practice test was generated by Den Frie Prøvebank and is unofficial. Den Frie Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+<div class="page-break"></div>
+
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1-30-minutter">Delprøve&nbsp;1 (30&nbsp;minutter)</h3>
+<p><strong>Ingen hjælpemidler tilladt</strong></p>
+<h4 id="opgave-1">Opgave&nbsp;1</h4>
+<p>Nedenfor finder du fire opslagstekster (A–D) fra brochurer, pjecer og hjemmesider. I alt er der ca. 2000 ord. Læs dem alle grundigt. Der er seks spørgsmål til teksterne.</p>
+<p><strong>Tekst&nbsp;A: Mælkevejens Bibliotek – mere end bare bøger</strong>  </p>
+<p>Mælkevejens Bibliotek ligger i hjertet af bydelen og har siden åbningen i 2005 udviklet sig til et levende mødested for børn, unge og voksne. I stueetagen findes en lys og rummelig café med fairtrade‑kaffe, hjemmebag og en lille scene, hvor lokale musikere kan optræde om fredagen. Der er et legeområde, hvor de mindste kan lytte til historier og bygge med klodser, mens forældrene sludrer over en kop kaffe. På første sal ligger et moderne bibliotek med mere end 35.000 titler, herunder e‑bøger og lydbøger. Der er også flere stille arbejdspladser og et multimedierum, hvor man kan redigere film eller optage podcasts.  </p>
+<p>Biblioteket tilbyder et bredt program af aktiviteter: skriveworkshops, makerspace‑kurser, foredrag og børneteater. Hver lørdag formiddag er der højtlæsning for børn, og hver onsdag aften mødes den lokale læsekreds. I skolernes ferier arrangeres kreative værksteder, hvor man kan prøve at lave papir, eksperimentere med 3D‑print eller tegne manga. Der er altid gratis adgang til arrangementerne, men tilmelding er nødvendig for kurser med begrænset plads.  </p>
+<p>Åbningstiderne er lange, så man kan komme før eller efter arbejde: mandag til torsdag kl.&nbsp;8.00–20.00, fredag kl.&nbsp;8.00–18.00, lørdag kl.&nbsp;10.00–16.00 og søndag kl.&nbsp;12.00–16.00. Medlemskab er gratis for børn under 14&nbsp;år, mens et voksenmedlemskab koster 300&nbsp;kr. om året og giver adgang til at låne spil, musik og film samt rabat på betalte events. Alle etager er handicapvenlige med elevatorer og brede døre. Har du idéer til nye aktiviteter eller ønsker du at blive frivillig, kan du kontakte bibliotekslederen via hjemmesiden eller møde op på informationsskrankens 2.&nbsp;sal.</p>
+<p><strong>Tekst&nbsp;B: Karrierehjørnet – et netværk for jobsøgende</strong>  </p>
+<p>Karrierehjørnet er et gratis tilbud til udlændinge og danskere, der søger arbejde eller ønsker at skifte branche. Caféen drives af kommunen og frivillige fagfolk og holder til i Kulturhusets lokaler. To gange om ugen, mandag og onsdag kl.&nbsp;16.00–18.00, kan du få hjælp til at skrive CV, opbygge en LinkedIn‑profil, træne jobinterview og lære om danske arbejdskultur. Der kræves ingen tilmelding – du møder bare op og tager dit CV med på en USB‑nøgle eller print. Kaffen er gratis, og samtalerne foregår i små grupper, så alle får tid og ro.  </p>
+<p>Udover de faste møder er der en månedlig workshop den første torsdag i måneden kl.&nbsp;17.30, hvor en specialist holder oplæg om emner som netværk, lønforhandling eller alternative karriereveje. Deltagerne kan stille spørgsmål og dele erfaringer. Karrierehjørnet tilbyder også et mentorprogram, hvor erfarne medarbejdere matcher med jobsøgende for et forløb på seks måneder. Programmet kræver en kort ansøgning og et interview for at sikre et godt match.  </p>
+<p>Karrierehjørnet samarbejder med Jobcentret og lokale virksomheder. De annoncerer ledige stillinger på opslagstavlen og arrangerer hvert kvartal en jobmesse, hvor man kan møde arbejdsgivere ansigt til ansigt. Hvis du har en idé til et oplæg eller vil melde dig som frivillig mentor, kan du kontakte koordinatoren via hjemmesiden. Alle aktiviteter er gratis, og tilbuddet henvender sig til folk i alle aldre og baggrunde.</p>
+<p><strong>Tekst&nbsp;C: Spar vand i hverdagen – små ændringer gør en forskel</strong>  </p>
+<p>Danskerne bruger i gennemsnit 106&nbsp;liter vand om dagen, men der er mange muligheder for at reducere forbruget uden at gå på kompromis med komforten. Ifølge Vandstyrelsens guide kan man spare op til 50&nbsp;liter om dagen ved blot at tage kortere brusebade: et fem minutters bad i stedet for ti minutters kan spare cirka 50&nbsp;liter. Ved at installere vandbesparende brusehoveder og perlatorer på haner reduceres vandmængden yderligere uden at trykket føles lavere. Lækager i toiletter og vandhaner kan koste mange liter om dagen – tjek derfor jævnligt for dryp og få utætheder repareret hurtigt.  </p>
+<p>Køkkenet er et andet sted med potentiale: vask grøntsager i en balje i stedet for under rindende vand, fyld opvaskemaskinen helt, og vælg økonomiprogrammet. Undgå at skylle tallerkener af, hvis de ikke er fedtede, men skrab dem i stedet rene med en spatel. Brug regnvand til blomsterkasser, og giv haven vand tidligt om morgenen eller sent om aftenen, så mindre fordampes.  </p>
+<p>I mange kommuner kan du få tilskud til at installere regnvandstank eller gråvandssystemer. Informationsmøder holdes jævnligt på rådhuset, hvor eksperter forklarer om tekniske løsninger, lovgivning og mulige besparelser. Små vaner i hverdagen, som at slukke for vandet mens man børster tænder eller vælge en energibesparende opvaskemaskine, gør en forskel for både miljøet og økonomien. Husk at lære børnene at spare på vandet – fremtidens generationer vil takke dig.</p>
+<p><strong>Tekst&nbsp;D: Mentornet – frivillige mentorer til unge flygtninge</strong>  </p>
+<p>Foreningen Mentornet matcher voksne frivillige med unge flygtninge i alderen 15–25&nbsp;år. Formålet er at give de unge et netværk, støtte i hverdagen og bedre muligheder for at fuldføre uddannelse og finde arbejde. Som mentor mødes man med sin mentee mindst to timer om ugen, oftest efter skole eller om aftenen. Indholdet kan være lektiehjælp, samtaler om uddannelsessystemet, hjælp til at skrive ansøgninger, øve dansk eller blot at lave mad sammen og tale om det nye land. Mentorrollen varer typisk et halvt år, og der er løbende mulighed for forlængelse, hvis begge parter ønsker det.  </p>
+<p>Inden man starter, deltager man i et obligatorisk introduktionskursus, hvor man lærer om kulturelle forskelle, traumer og grænser. Der er også mulighed for supervision undervejs, hvor man kan dele erfaringer med andre mentorer og få sparring fra en professionsuddannet koordinator. Alle frivillige er dækket af en forsikring, og udgifter til offentligt transport refunderes.  </p>
+<p>Mentornet arrangerer månedlige sociale events som fodboldkampe, fællesspisning og museumsbesøg, så mentees kan møde andre unge og øve det danske sprog. For at blive mentor skal man være mindst 20&nbsp;år, have en ren straffeattest og kunne afsætte tid regelmæssigt. Ansøgning foregår via hjemmesiden, hvor man også kan læse historier fra tidligere mentorer og mentees. Har du spørgsmål, kan du ringe til kontoret tirsdag mellem kl.&nbsp;10.00 og 14.00.</p>
+<div class="page-break"></div>
+
+<h5 id="spørgsmål-til-teksterne">Spørgsmål til teksterne</h5>
+<ol>
+<li>Hvornår lukker Mælkevejens Bibliotek om søndagen?  <hr class="line-for-written-answer"></li>
+<li>Hvor meget koster et voksenmedlemskab af Mælkevejens Bibliotek om året?  <hr class="line-for-written-answer"></li>
+<li>På hvilke dage og tidspunkter mødes Karrierehjørnet?  <hr class="line-for-written-answer"></li>
+<li>Hvor mange liter vand kan man spare ved at tage et fem minutters bad i stedet for et ti minutters bad?  <hr class="line-for-written-answer"></li>
+<li>Hvad er minimumstiden, en mentor skal afsætte pr. uge i Mentornet-programmet?  <hr class="line-for-written-answer"></li>
+<li>Hvilken aldersgruppe hjælper Mentornet mentorprogrammet?  <hr class="line-for-written-answer"></li>
+</ol>
+<div class="page-break"></div>
+
+<h4 id="opgave-2">Opgave&nbsp;2</h4>
+<p>Nedenfor finder du ni korte tekster (A–I), fx annoncer og opslag, med en samlet længde på omkring 375 ord. De enkelte tekster identificeres ved et bogstav. Der er syv sætninger (1–7), som skal matches med teksterne. Sæt kun ét bogstav ved hver sætning.  </p>
+<p><strong>A.</strong> <em>Bofællesskab søger beboer</em> – Vi har et ledigt værelse i vores hyggelige bofællesskab i Roskilde fra 1.&nbsp;oktober. Lejligheden er 120&nbsp;m² med fælles køkken og have. Husleje 4.800&nbsp;kr./måned plus forbrug. Vi søger en rolig person uden husdyr, der vil deltage i fælles madlavning hver torsdag. Kontakt: bo@fællesskab.dk.  </p>
+<p><strong>B.</strong> <em>Gratis foredrag</em> – “Vejr og klimaforandringer” med meteorolog Mette Jensen på biblioteket på fredag kl.&nbsp;19.00. Alle er velkomne, og der serveres kaffe og te. Ingen tilmelding.  </p>
+<p><strong>C.</strong> <em>Sommermarked</em> – Kom til stort udendørs marked på torvet lørdag kl.&nbsp;10–17. Stand koster 100&nbsp;kr. Sælg dine brugte ting eller find gode tilbud. Musik, madboder og aktiviteter for børn hele dagen.  </p>
+<p><strong>D.</strong> <em>Bager søges</em> – Vi søger en erfaren bager til vores morgenbageri i Aarhus. Stillingen er fuld tid med start snarest. Du skal kunne arbejde tidligt om morgenen. Ansøg senest 20.&nbsp;september via mail.  </p>
+<p><strong>E.</strong> <em>Hund fundet</em> – En brun labrador med rødt halsbånd er fundet i parken ved søen. Henvend dig på dyreinternatet med beskrivelse og ID.  </p>
+<p><strong>F.</strong> <em>Busrute ændret</em> – Linie 25 kører fra mandag om via Stationsvej og standser ikke længere ved Rådhuspladsen. Se nye tider på <a href="http://www.citybus.dk">www.citybus.dk</a>.  </p>
+<p><strong>G.</strong> <em>Barista til café</em> – Smilende deltidsmedarbejder søges til lille kaffebar i Aalborg. Arbejdstid 15&nbsp;timer om ugen, primært eftermiddag og weekend. Erfaring med kundeservice er en fordel.  </p>
+<p><strong>H.</strong> <em>Selvforsvarskursus</em> – Lær grundlæggende selvforsvar hver tirsdag kl.&nbsp;18–19.30 i sportscenteret. Pris: 60&nbsp;kr. pr. gang. Medbring træningstøj.  </p>
+<p><strong>I.</strong> <em>Strikkeklub</em> – Elsker du håndarbejde? Vi mødes hver anden torsdag kl.&nbsp;19 hjemme hos skiftende medlemmer for at strikke og hygge. Tilmeld dig på biblioteket.  </p>
+<div class="spacer"></div>
+
+<p><strong>Sætninger:</strong></p>
+<p><em>Sæt kun ét bogstav ved hver sætning.</em></p>
+<ol>
+<li>Jeg vil gerne vide, hvornår sommermarkedet slutter. _________  </li>
+<li>Jeg leder efter et deltidsjob i en café. _________  </li>
+<li>Jeg skal leje en stand til 100&nbsp;kr. _________  </li>
+<li>Min hund er væk. Hvor skal jeg henvende mig? _________  </li>
+<li>Jeg søger en plads i et bofællesskab uden husdyr. _________  </li>
+<li>Jeg vil høre et gratis foredrag om vejret. _________  </li>
+<li>Jeg vil gerne strikke sammen med andre. _________</li>
+</ol>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2-60-minutter">Delprøve&nbsp;2 (60&nbsp;minutter)</h3>
+<p><strong>Ingen hjælpemidler tilladt</strong></p>
+<h4 id="opgave-3">Opgave&nbsp;3</h4>
+<p>Læs nedenstående fortælling. I teksten er der fjernet ni ord. Ordene findes i listen under teksten sammen med fem ekstra ord, der ikke passer.  </p>
+<p><strong>Tekst:</strong><br>Min ven Ahmed flyttede til Danmark for at studere. Da han kom, kendte han ingen <strong>(1)</strong> ______ i byen og var nervøs for at begynde på universitetet. Vejret var <strong>(2)</strong> ______ om vinteren, og han savnede solen fra sit hjemland. Han begyndte at <strong>(3)</strong> ______ med sine forældre hver aften for at føle sig mindre alene.  </p>
+<p>Snart lærte han at cykle rundt i <strong>(4)</strong> ______ og opdagede de smukke parker. Han fandt også en lille <strong>(5)</strong> ______, der solgte hans yndlingsretter, hvilket gjorde ham glad. På studiet fik han en god <strong>(6)</strong> ______ med sin danske tutor, som hjalp ham med at forstå lektierne.  </p>
+<p>Efter et par måneder blev han mere <strong>(7)</strong> ______ og meldte sig til en frivillig gruppe. Der fik han nye venner og <strong>(8)</strong> ______ for lokal kultur. Nu føler han sig hjemme og planlægger at <strong>(9)</strong> ______ i Danmark efter sin uddannelse.</p>
+<div class="spacer"></div>
+
+<p><strong>Ord til brug (ni passer, fem er distraktorer):</strong></p>
+<p><em>Noter: Skriv det korrekte ord i hver blank. Ét ord må kun bruges én gang.</em></p>
+<div class="columns">
+  <ul class="column">
+    <li>kolde</li>
+    <li>ringe</li>
+    <li>relation</li>
+    <li>modig</li>
+    <li>kærlighed</li>
+    <li>unge</li>
+    <li>bo</li>
+  </ul>
+  <ul class="column">
+    <li>byen</li>
+    <li>kiosk</li>
+    <li>interesse</li>
+    <li>venner</li>
+    <li>triste</li>
+    <li>kommunikere</li>
+    <li>naboer</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h4 id="opgave-4">Opgave&nbsp;4</h4>
+<p>Læs teksten nedenfor. Den består af seks afsnit. I hvert afsnit er der fjernet én sætning. Efter teksten finder du otte sætninger (A–H), hvoraf seks passer i hullerne. To sætninger er distraktorer.  </p>
+<p><strong>Tekst:</strong>  </p>
+<p><strong>Afsnit&nbsp;1</strong>  </p>
+<p>Emil har altid elsket duften af friskbagt brød. Som ung lærling tilbragte han timer i bageriets varme og drømte om at åbne sit eget sted. Da han fyldte 30, besluttede han at tage springet og sige sit sikre job op. <strong>(1)</strong> ______  </p>
+<p><strong>Afsnit&nbsp;2</strong>  </p>
+<p>Han fandt et lille lokale i byens gamle kvarter, malede væggene lyseblå og købte brugt udstyr. Venner og familie hjalp med at flytte tunge ovne ind og indrette med træborde og gamle lamper. <strong>(2)</strong> ______ Emil ville gerne skabe et sted, hvor kunderne kunne føle sig hjemme og følge med i bagningen.  </p>
+<p><strong>Afsnit&nbsp;3</strong>  </p>
+<p>De første måneder var hårde. Han stod op kl.&nbsp;4 hver morgen for at ælte dej og forme baguetter, mens byen stadig sov. Kunderne begyndte langsomt at finde vej, trukket af duften af kanel og kaffe. <strong>(3)</strong> ______ På travle dage måtte han lægge ekstra timer i arbejdet, men han klagede aldrig.  </p>
+<p><strong>Afsnit&nbsp;4</strong>  </p>
+<p>Bæredygtighed var vigtigt for Emil. Han brugte økologiske råvarer og købte korn fra lokale bønder. Han sørgede for, at intet gik til spilde. <strong>(4)</strong> ______ Han installerede også solceller på taget, så bageriet kunne producere en del af sin egen energi.  </p>
+<p><strong>Afsnit&nbsp;5</strong>  </p>
+<p>Efter et år deltog Emil i en konkurrence om byens bedste brød. Han var nervøs, men bagte hele natten for at præsentere sit mest perfekte rugbrød. <strong>(5)</strong> ______ Præmien bestod af nye maskiner, som gjorde arbejdet lettere, og omtalen skaffede ham endnu flere kunder.  </p>
+<p><strong>Afsnit&nbsp;6</strong>  </p>
+<p>I dag har bageriet tre ansatte og åbner snart en filial i nabobyen. Emil bruger sin fritid på at undervise unge i bagning og fortælle dem om at følge deres passion. <strong>(6)</strong> ______ Han håber, at hans historie kan inspirere andre til at tro på deres drømme og skabe noget eget.</p>
+<div class="page-break"></div>
+
+<p><strong>Sætninger (A–H):</strong></p>
+<p><em>Skriv bogstavet for den rigtige sætning ved hver 1&nbsp;–&nbsp;6. To sætninger skal ikke bruges.</em></p>
+<ul class="multiple-choice-answers">
+  <li>Han havde sparet op i flere år for at få råd til udstyr og husleje.</li>
+  <li>Hans venner hjalp med at male væggene og indrette det lille lokale.</li>
+  <li>Det var hårdt at stå op kl.&nbsp;4 hver morgen, men kunderne satte pris på de varme rundstykker.</li>
+  <li>Han solgte også kaffe, så de forbipasserende kunne tage en kop med på arbejde.</li>
+  <li>Emil donerede brød, som ikke blev solgt, til det lokale herberg.</li>
+  <li>Han blev overrasket, da han vandt førsteprisen for bedste rugbrød i en konkurrence.</li>
+  <li>Historien om hans succes inspirerede andre unge til at følge deres drømme.</li>
+  <li>Selv når der var stille i butikken, øvede han sig på nye opskrifter og teknikker.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h4 id="opgave-5">Opgave&nbsp;5</h4>
+<p>Du skal læse et interview med en person. Teksten består af otte afsnit (A–H). Der er fem spørgsmål til teksten. Sæt bogstavet for det afsnit, der indeholder svaret, ved hvert spørgsmål.</p>
+<p><strong>Tekst:</strong>  </p>
+<p><strong>Afsnit&nbsp;A</strong>  </p>
+<p>Maja Sørensen er 29&nbsp;år og leder firmaet “Grønt Fællesskab”, der hjælper familier med at anlægge små køkkenhaver i byen. Hun bor i en lejlighed i Odense med sin kæreste og deres hund, og hun bruger ofte aftenerne på at passe planterne på altanen.  </p>
+<p><strong>Afsnit&nbsp;B</strong>  </p>
+<p>Maja læste egentlig farmaci, men efter et år på universitetet følte hun sig fanget i laboratoriet. Hun meldte sig som frivillig i et lokalområde, der plantede træer på skoler, og hun opdagede, at hun brændte for bæredygtighed og fællesskab. Denne oplevelse fik hende til at skifte studie og fokusere på miljø.  </p>
+<p><strong>Afsnit&nbsp;C</strong>  </p>
+<p>I 2019 grundlagde hun “Grønt Fællesskab”. De første måneder arbejdede hun fra sin stue og kørte rundt i en gammel bil for at besøge kunder. Hun mødte modstand fra dem, der troede, at køkkenhaver var for bøvlede i byen, men hun viste dem, hvordan man kan dyrke grøntsager i kasser og på altaner.  </p>
+<p><strong>Afsnit&nbsp;D</strong>  </p>
+<p>I dag har firmaet fem ansatte, heraf to praktikanter. Maja prioriterer at ansætte unge med forskellige baggrunde og giver dem mulighed for at lære om projektledelse, marketing og botanik. Hun holder ofte oplæg på skoler og deltager i messer for at inspirere flere til at dyrke egne planter.  </p>
+<p><strong>Afsnit&nbsp;E</strong>  </p>
+<p>En af de største udfordringer er at overbevise travle familier om at finde tid til at passe en have. “Mange tror, at det tager for lang tid, men selv 15&nbsp;minutter om dagen gør en forskel,” siger hun. Hun prøver at forklare fordelene ved frisk mad, fællesskab og læring for børn.  </p>
+<p><strong>Afsnit&nbsp;F</strong>  </p>
+<p>Maja praktiserer, hvad hun prædiker. Hjemme sorterede hun affald længe før, det blev almindeligt, og hun cykler til arbejde hver dag. Når hun ikke arbejder, går hun ture med sin hund, laver yoga eller læser bøger om natur. Hun elsker også at bage brød til vennerne.  </p>
+<p><strong>Afsnit&nbsp;G</strong>  </p>
+<p>Fremtiden ser grøn ud: Maja planlægger at udvide virksomheden til andre regioner i Norden og udvikle en app, hvor brugerne kan dele tips og følge hinandens haver. Hun samarbejder allerede med organisationer i Sverige og Finland og håber at skabe et netværk på tværs af landegrænser.  </p>
+<p><strong>Afsnit&nbsp;H</strong>  </p>
+<p>Maja siger, at det bedste ved hendes arbejde er at se børn plukke deres første gulerod og være stolte. Hun bliver også glad, når familier, der ikke kendte hinanden, begynder at udveksle opskrifter og frø. “Det handler ikke kun om planter,” siger hun, “men om relationer og livsglæde.”</p>
+<div class="page-break"></div>
+
+<h5 id="spørgsmål">Spørgsmål</h5>
+<ol>
+<li>I hvilket afsnit beskrives Majas familieliv?  <hr class="line-for-written-answer"></li>
+<li>Hvad fik Maja til at skifte fra farmaci til miljøarbejde?  <hr class="line-for-written-answer"></li>
+<li>Hvor mange personer arbejder der nu i “Grønt Fællesskab”?  <hr class="line-for-written-answer"></li>
+<li>Hvad er en af de største udfordringer i Majas arbejde?  <hr class="line-for-written-answer"></li>
+<li>Hvad laver Maja i sin fritid?  <hr class="line-for-written-answer"></li>
+</ol>
+<div class="page-break"></div>
+
+<h2 id="skriftlig-fremstilling-90-minutter--alle-ordbøger-tilladt">Skriftlig fremstilling (90&nbsp;minutter&nbsp;– alle ordbøger tilladt)</h2>
+<h3 id="delprøve-1--vælg-enten-1a-eller-1b">Delprøve&nbsp;1 – vælg enten 1A eller 1B</h3>
+<p><strong>1A.</strong> Du pendler hver dag med bus til arbejde, men den seneste måned har busserne været forsinkede og overfyldte. Du ønsker at klage til transportselskabet og foreslå en løsning. Skriv en halvformel henvendelse på ca. 150–200 ord, hvor du:</p>
+<ul>
+<li>beskriver de gentagne forsinkelser og overfyldte busser og tidspunktet på dagen  </li>
+<li>fortæller, hvordan det påvirker dig og eventuelt din arbejdsgiver  </li>
+<li>nævner, at du har henvendt dig til chaufføren uden resultat  </li>
+<li>foreslår, hvad transportselskabet kan gøre for at forbedre situationen (f.eks. flere afgange eller større busser)</li>
+</ul>
+<p><strong>1B.</strong> Din veninde har åbnet en lille secondhand‑tøjboutique i din by og beder dig om at skrive et opslag til hendes hjemmeside, der skal tiltrække nye kunder. Skriv en halvformel tekst på ca. 150–200 ord, hvor du:</p>
+<ul>
+<li>beskriver butikslokation og den hyggelige indretning  </li>
+<li>fortæller om udvalg af tøj, accessories og fokus på bæredygtighed  </li>
+<li>fremhæver atmosfæren, den venlige betjening og eventuelle særlige tilbud  </li>
+<li>opfordrer folk til at besøge butikken og dele opslaget med venner</li>
+</ul>
+<h3 id="delprøve-2">Delprøve&nbsp;2</h3>
+<p>Du har netop afsluttet et madlavningskursus. Din underviser sender dig en e‑mail, hvor hun beder dig om at skrive et kort brev til en tidligere kursist, som overvejer at starte på kurset. Skriv en uformel e‑mail på mindst 100 ord, hvor du:</p>
+<ul>
+<li>hilser pænt og præsenterer dig selv  </li>
+<li>fortæller kort om, hvordan kurset var opbygget (teori, praksis, opgaver)  </li>
+<li>beskriver, hvad du lærte, og hvordan du bruger det i din hverdag  </li>
+<li>giver din mening om læreren og stemningen på holdet  </li>
+<li>opmuntrer kursisten til at tilmelde sig og tilbyder at besvare spørgsmål</li>
+</ul>
+<div class="page-break"></div>
+
+<p><em>Brug disse sider til at skrive din skriftlige opgave.</em></p>
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<h2 id="mundtlig-kommunikation-20-minutter-for-to-prøvedeltagere">Mundtlig kommunikation (20&nbsp;minutter for to prøvedeltagere)</h2>
+<h3 id="delprøve-1-ca-10-minutter-i-alt">Delprøve&nbsp;1 (ca. 10&nbsp;minutter i alt)</h3>
+<p>Hver prøvedeltager forbereder og holder en præsentation på ca. 1½ minut om et selvvalgt emne fra sin hverdag, fx arbejde, fritidsinteresser, familie, bolig eller en tradition. Efter præsentationen interviewer eksaminator prøvedeltageren i ca. 3½ minut med spørgsmål, der uddyber emnet.  </p>
+<p><strong>Fokus:</strong> Evne til at fortælle sammenhængende om personligt erfarede forhold og at forstå og besvare spørgsmål fra eksaminator.  </p>
+<h3 id="delprøve-2-ca-10-minutter-i-alt">Delprøve&nbsp;2 (ca. 10&nbsp;minutter i alt)</h3>
+<p>Der er tre emner (A, B og C) om konkrete hverdagsforhold. Til hvert emne hører to billeder (Billede&nbsp;1 og Billede&nbsp;2), som illustrerer en situation. Prøvedeltagerne vælger ét emne. Først interviewer eksaminator hver prøvedeltager enkeltvis om det valgte billede. Derefter følger en samtale mellem de to prøvedeltagere, hvor de taler sammen på baggrund af en case, som eksaminator præsenterer. Eksaminator fungerer som mediator og sørger for, at begge prøvedeltagere kommer til orde.</p>
+<div class="page-break"></div>
+
+<p><strong>Emner og billeder:</strong></p>
+<ul>
+<li><strong>Emne&nbsp;A: Digitalt fællesskab og sociale medier</strong></li>
+</ul>
+<p>Kommunen overvejer at etablere et offentligt “digitalt mødested” med kurser i digital dannelse og fælles aktiviteter online. Diskutér fordele og ulemper, herunder muligheder for at bekæmpe ensomhed og de risici, der er ved skærmtid. Kom med forslag til, hvordan man skaber et sundt onlinefællesskab for både unge og ældre.</p>
+<img alt="Billede&nbsp;1 viser en gruppe unge og ældre, der sidder ved computere i et bibliotek og får undervisning." class="topic-picture" src="./test-8-grafik-1.webp">
+
+<img alt="Billede&nbsp;2 viser en person, der deltager i et online møde hjemme ved køkkenbordet og smiler til skærmen." class="topic-picture" src="./test-8-grafik-2.webp">
+
+<div class="page-break"></div>
+
+<ul>
+<li><strong>Emne&nbsp;B: Genbrug og cirkulær økonomi</strong></li>
+</ul>
+<p>Byrådet vil åbne et nyt genbrugscenter og opfordrer borgerne til at bytte og reparere i stedet for at købe nyt. Diskutér fordele og ulemper for miljø og lokale butikker, samt hvordan man kan gøre genbrug attraktivt for flere aldersgrupper. Kom med idéer til workshops eller samarbejder, der kan fremme en cirkulær tankegang.</p>
+<img alt="Billede&nbsp;1 viser et marked med boder, hvor folk bytter tøj og bøger." class="topic-picture" src="./test-8-grafik-3.webp">
+
+<img alt="Billede&nbsp;2 viser en person, der reparerer en cykel i et værksted med værktøj og reservedele." class="topic-picture" src="./test-8-grafik-4.webp">
+
+<div class="page-break"></div>
+
+<ul>
+<li><strong>Emne&nbsp;C: Natur og mental sundhed</strong></li>
+</ul>
+<p>Kommunen diskuterer at anlægge en stor byskov tæt på centrum for at forbedre borgernes mentale sundhed. Diskutér, hvad grønne områder betyder for trivsel, og hvordan man kan sikre både biodiversitet og rekreative muligheder. Kom med forslag til aktiviteter og initiativer, der kan få flere til at bruge naturen i hverdagen.</p>
+<img alt="Billede&nbsp;1 viser en familie, der går tur i en skov med høje træer og fuglesang." class="topic-picture" src="./test-8-grafik-5.webp">
+
+<img alt="Billede&nbsp;2 viser en yogagruppe, der laver øvelser i en park ved solnedgang." class="topic-picture" src="./test-8-grafik-6.webp">
+
+<hr>
+<p><em>This practice test was generated by Den Frie Prøvebank and is unofficial. Den Frie Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+
+	
+
+</body></html>

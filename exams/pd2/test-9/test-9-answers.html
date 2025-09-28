@@ -1,0 +1,545 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="pd2-test-9---svarark">PD2 <em>Test 9 - Svarark</em></h1>
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1--opgave-1">Delprøve&nbsp;1 – Opgave&nbsp;1</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Hvad koster et års medlemskab af Det&nbsp;Grønne&nbsp;Torv?</td>
+<td>450&nbsp;kr. om året.</td>
+</tr>
+<tr>
+<td>2. Hvornår er caféen i Det&nbsp;Grønne&nbsp;Torv åben om søndagen?</td>
+<td>Kl.&nbsp;10.00–14.00.</td>
+</tr>
+<tr>
+<td>3. Hvilket tidspunkt mødes filmklubben “Dansk på Lærredet” om onsdagen?</td>
+<td>Kl.&nbsp;17.30–20.30.</td>
+</tr>
+<tr>
+<td>4. Nævn én ting, som deltagerne kan medbringe til filmklubben, hvis de vil dele med andre.</td>
+<td>Fx snacks eller hjemmebag.</td>
+</tr>
+<tr>
+<td>5. Hvilke to materialer skal skylles og sorteres ifølge guiden til affaldssortering, før de smides ud?</td>
+<td>Plastik- og metalemballage (skal skylles og sorteres).</td>
+</tr>
+<tr>
+<td>6. Hvor mange timer om ugen bruger de fleste frivillige i “Nabohjælp” på deres opgaver?</td>
+<td>Ca.&nbsp;to timer om ugen.</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h3 id="delprøve-1--opgave-2-multiple-matching">Delprøve&nbsp;1 – Opgave&nbsp;2 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Sætning</th>
+<th>Rigtigt bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Jeg vil gerne hjælpe med at passe planter og høste grøntsager.</td>
+<td><strong>H</strong> (Fælleshave søger frivillige)</td>
+</tr>
+<tr>
+<td>2. Jeg leder efter et deltidsjob som tjener i Holbæk.</td>
+<td><strong>E</strong> (Serveringsmedarbejder søges)</td>
+</tr>
+<tr>
+<td>3. Jeg mangler hjælp til at forstå e‑Boks og NemID.</td>
+<td><strong>D</strong> (Digitalt kursus)</td>
+</tr>
+<tr>
+<td>4. Jeg vil vide, hvornår svømmehallen åbner igen efter renoveringen.</td>
+<td><strong>I</strong> (Svømmehal lukket)</td>
+</tr>
+<tr>
+<td>5. Jeg vil være med i en læsegruppe og diskutere bøger.</td>
+<td><strong>A</strong> (Boghjørnet søger medlemmer)</td>
+</tr>
+<tr>
+<td>6. Jeg skal aflevere en kælende hunkat, der har et rødt halsbånd.</td>
+<td><strong>B</strong> (Kat fundet)</td>
+</tr>
+<tr>
+<td>7. Jeg vil købe en billig brugt stationcar.</td>
+<td><strong>C</strong> (Brugt bil til salg)</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h2 id="læseforståelse-1">Læseforståelse</h2>
+<h3 id="delprøve-2--opgave-3-huludfyldning-med-ord">Delprøve&nbsp;2 – Opgave&nbsp;3 (Huludfyldning med ord)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt ord</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>støtte</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>venlige</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>svært</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>sparre</td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>netværk</td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>modne</td>
+</tr>
+<tr>
+<td>(7)</td>
+<td>satte</td>
+</tr>
+<tr>
+<td>(8)</td>
+<td>elsker</td>
+</tr>
+<tr>
+<td>(9)</td>
+<td>dele</td>
+</tr>
+</tbody></table>
+<p>Distraktorord (ikke brugt): savede, varmt, delt, holde, udtale.</p>
+<div class="spacer"></div>
+
+<h3 id="delprøve-2--opgave-4-huludfyldning-med-sætninger">Delprøve&nbsp;2 – Opgave&nbsp;4 (Huludfyldning med sætninger)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt sætning</th>
+<th>Bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>Hun stillede sig på et hjørne af lokalet og betragtede i det skjulte de andre, før hun gik hen til en ledig plads.</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>Hun var vant til at arbejde med præcision og procedurer, så det var uvant at give slip.</td>
+<td><strong>F</strong></td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>Det overraskede hende, hvor hurtigt hun følte sig som en del af fællesskabet.</td>
+<td><strong>E</strong></td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>Læreren viste dem sit gamle værktøj og fortalte om glasureksperimenter, der var gået galt.</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>Hun fik ros af læreren for sin indsats, og det gav hende selvtillid til at prøve noget nyt.</td>
+<td><strong>H</strong></td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>Hun bemærkede, at hendes fingre var konstant dækket af ler, men det gjorde hende ikke noget.</td>
+<td><strong>D</strong></td>
+</tr>
+</tbody></table>
+<p>Distraktorer: <strong>C</strong> (På vej hjem den første aften kunne hun ikke lade være med at grine over sin nervøsitet.) og <strong>G</strong> (Efter udstillingen besluttede hun at holde en pause og fokusere på sin familie.)</p>
+<div class="spacer"></div>
+
+<h3 id="delprøve-2--opgave-5-multiple-matching">Delprøve&nbsp;2 – Opgave&nbsp;5 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. I hvilket afsnit beskrives Jakobs familie og fritidsinteresser?</td>
+<td><strong>Afsnit&nbsp;A</strong> (familie og maratonløb)</td>
+</tr>
+<tr>
+<td>2. Hvorfor besluttede Jakob sig for at stifte sin organisation?</td>
+<td><strong>Afsnit&nbsp;C</strong> (han oplevede behovet for digital inklusion efter at undervise ældre)</td>
+</tr>
+<tr>
+<td>3. Hvor mange ansatte arbejder der nu i Jakobs organisation?</td>
+<td><strong>Afsnit&nbsp;D</strong> (12 ansatte)</td>
+</tr>
+<tr>
+<td>4. Hvad ser Jakob som en stor udfordring i sit arbejde?</td>
+<td><strong>Afsnit&nbsp;E</strong> (at overbevise sponsorer og det offentlige om vigtigheden af digitale færdigheder for ældre)</td>
+</tr>
+<tr>
+<td>5. Hvad gør Jakob i sin fritid for at slappe af?</td>
+<td><strong>Afsnit&nbsp;F</strong> (løber lange ture i skoven og bager surdejsbrød)</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h2 id="skriftlig-fremstilling-delprøve-1-og-delprøve-2">Skriftlig fremstilling (Delprøve&nbsp;1 og Delprøve&nbsp;2)</h2>
+<p>Ingen entydige facit – besvarelserne vurderes efter:</p>
+<ul>
+<li>Opfyldelse af alle opgavekrav (de nævnte punkter skal behandles).</li>
+<li>Klar struktur, sammenhæng og passende omfang (ca.&nbsp;150–200 ord for Delprøve&nbsp;1; mindst 100 ord for Delprøve&nbsp;2).</li>
+<li>Sproglig korrekthed (grammatik, ordforråd og stavning).</li>
+<li>Stil og register (halvformel henvendelse vs. uformel e‑mail).</li>
+</ul>
+<p>En god besvarelse i Delprøve&nbsp;1 adresserer hvert underpunkt og bruger et høfligt, halvformelt sprog. Delprøve&nbsp;2 skal være en personlig e‑mail med en venlig tone, beskrivelse af oplevelsen, vurdering af pris/faciliteter og en opfordring til veninden om at deltage.</p>
+<div class="spacer"></div>
+
+<h2 id="mundtlig-kommunikation">Mundtlig kommunikation</h2>
+<p>Der er ingen endegyldige facit for denne delprøve. Præstationen bedømmes på:</p>
+<ul>
+<li>Flydende og korrekt sprogbrug (grammatik, udtale og ordforråd).</li>
+<li>Relevant indhold og evne til at holde en sammenhængende præsentation.</li>
+<li>Struktur og samarbejde i dialogen med eksaminator og medprøvedeltager.</li>
+<li>Aktiv interaktion, herunder evne til at besvare spørgsmål og stille opklarende spørgsmål.</li>
+</ul>
+<p>Prøvedeltageren skal være forberedt på at præsentere et selvvalgt emne, beskrive og diskutere billeder samt indgå i en samtale om hverdagsrelaterede emner.</p>
+
+	
+
+</body></html>

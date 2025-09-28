@@ -1,0 +1,544 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="pd2-test-1---svarark">PD2 <em>Test 1 - Svarark</em></h1>
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1--opgave-1">Delprøve&nbsp;1 – Opgave&nbsp;1</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Hvad er den normale åbningstid i kulturhuset “Byens Rum” om lørdagen?</td>
+<td>Lørdag er kulturhuset åbent fra kl.&nbsp;9.00 til kl.&nbsp;16.00.</td>
+</tr>
+<tr>
+<td>2. Hvor meget koster et medlemskab af kulturhuset om året?</td>
+<td>500&nbsp;kr. om året.</td>
+</tr>
+<tr>
+<td>3. Hvor og hvornår mødes Sprogcaféen “Snak Sammen”?</td>
+<td>På hovedbiblioteket (sal&nbsp;3) hver tirsdag og torsdag kl.&nbsp;17.00–19.00.</td>
+</tr>
+<tr>
+<td>4. Nævn én ting, som deltagere kan medbringe til sprogcaféen, hvis de ønsker det.</td>
+<td>De kan fx medbringe aviser, billeder eller emner, de gerne vil tale om.</td>
+</tr>
+<tr>
+<td>5. Hvilket energimærke anbefales til husholdningsapparater ifølge Energistyrelsens guide?</td>
+<td>Energimærke A++ eller bedre.</td>
+</tr>
+<tr>
+<td>6. Hvor mange timer om ugen forventes man som minimum at arbejde frivilligt via “Giv en Hånd”?</td>
+<td>Der er ingen fast minimum; mange frivillige engagerer sig et par timer om ugen, men alt fra en gang om måneden til flere gange om ugen er velkomment.</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h3 id="delprøve-1--opgave-2-multiple-matching">Delprøve&nbsp;1 – Opgave&nbsp;2 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Sætning</th>
+<th>Rigtigt bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Jeg vil gerne vide, hvornår loppemarkedet slutter.</td>
+<td><strong>C</strong> (Loppemarkedet slutter kl.&nbsp;15.00)</td>
+</tr>
+<tr>
+<td>2. Jeg leder efter et deltidsjob med kundekontakt i Odense.</td>
+<td><strong>G</strong> (Restaurant medarbejder)</td>
+</tr>
+<tr>
+<td>3. Jeg skal udleje en stand og betaler 75&nbsp;kr. for den.</td>
+<td><strong>C</strong> (Loppemarked – stand koster 75&nbsp;kr.)</td>
+</tr>
+<tr>
+<td>4. Min cykel blev væk ved biblioteket. Hvem kan jeg tale med?</td>
+<td><strong>E</strong> (Cykel fundet – henvendelse på kontoret ved biblioteket)</td>
+</tr>
+<tr>
+<td>5. Jeg vil gerne bestille tid til at få klippet mit hår og er i Esbjerg.</td>
+<td><strong>D</strong> (Frisør søges – henvender sig til frisørsalonen i Esbjerg)</td>
+</tr>
+<tr>
+<td>6. Jeg vil begynde at dyrke yoga og skal huske at tage noget med til timen.</td>
+<td><strong>H</strong> (Yoga for begyndere – medbring måtte og løstsiddende tøj)</td>
+</tr>
+<tr>
+<td>7. Jeg vil gerne høre livemusik gratis i weekenden.</td>
+<td><strong>B</strong> (Gratis koncert i parken)</td>
+</tr>
+</tbody></table>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2--opgave-3-huludfyldning-med-ord">Delprøve&nbsp;2 – Opgave&nbsp;3 (Huludfyldning med ord)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt ord</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>unge</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>kolde</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>ringe</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>landsbyen</td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>smag</td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>kommunikation</td>
+</tr>
+<tr>
+<td>(7)</td>
+<td>svært</td>
+</tr>
+<tr>
+<td>(8)</td>
+<td>tage sig</td>
+</tr>
+<tr>
+<td>(9)</td>
+<td>netværk</td>
+</tr>
+</tbody></table>
+<p>De ord, der ikke anvendes, er <strong>bo</strong>, <strong>humor</strong>, <strong>kammeratskab</strong>, <strong>tale</strong> og <strong>plan</strong> (distraktorer).</p>
+<div class="spacer"></div>
+
+<h3 id="delprøve-2--opgave-4-huludfyldning-med-sætninger">Delprøve&nbsp;2 – Opgave&nbsp;4 (Huludfyldning med sætninger)</h3>
+<table>
+<thead>
+<tr>
+<th>Blank</th>
+<th>Korrekt sætning</th>
+<th>Bogstav</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)</td>
+<td>Hjemmefra havde hun sparet penge op til flybilletter og forsikring.</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>(2)</td>
+<td>Hun lærte at lave paella og brugte sine fridage på at vandre i bjergene.</td>
+<td><strong>H</strong></td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>Hver dag var en ny udfordring, men hun elskede at være ude i naturen.</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>(4)</td>
+<td>Hun blev imponeret over, hvor disciplineret børnene var i skolen.</td>
+<td><strong>G</strong></td>
+</tr>
+<tr>
+<td>(5)</td>
+<td>Hun savnede ofte sin familie, men videoopkald gjorde afstanden mindre.</td>
+<td><strong>E</strong></td>
+</tr>
+<tr>
+<td>(6)</td>
+<td>Erfaringerne fra hendes rejser gav hende mod til at vælge en ny uddannelse.</td>
+<td><strong>F</strong></td>
+</tr>
+</tbody></table>
+<p>Distraktorerne er sætningerne <strong>C</strong> og <strong>D</strong>, der ikke anvendes.</p>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2--opgave-5-multiple-matching">Delprøve&nbsp;2 – Opgave&nbsp;5 (Multiple matching)</h3>
+<table>
+<thead>
+<tr>
+<th>Spørgsmål</th>
+<th>Facit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. I hvilket afsnit beskrives Louises familieliv?</td>
+<td><strong>Afsnit&nbsp;A</strong></td>
+</tr>
+<tr>
+<td>2. Hvorfor begyndte Louise at interessere sig for genbrug af byggematerialer?</td>
+<td><strong>Afsnit&nbsp;B</strong> (hun bemærkede affaldsmængden i sit tømrerjob)</td>
+</tr>
+<tr>
+<td>3. Hvor mange ansatte arbejder der nu i virksomheden “Grønne Løsninger”?</td>
+<td><strong>Afsnit&nbsp;D</strong> (otte ansatte, heraf fire lærlinge)</td>
+</tr>
+<tr>
+<td>4. Hvad er en af de største udfordringer i Louises arbejde?</td>
+<td><strong>Afsnit&nbsp;E</strong> (at overbevise folk om at investere i grønne løsninger)</td>
+</tr>
+<tr>
+<td>5. Hvad laver Louise i sin fritid?</td>
+<td><strong>Afsnit&nbsp;G</strong> (løber i skoven, leger med børnene, læser krimier og lytter til podcasts)</td>
+</tr>
+</tbody></table>
+<div class="spacer"></div>
+
+<h2 id="skriftlig-fremstilling-delprøve-1-og-delprøve-2">Skriftlig fremstilling (Delprøve&nbsp;1 og Delprøve&nbsp;2)</h2>
+<p>Der findes ingen entydige facit til de skriftlige opgaver, da svarene er åbne og bedømmes ud fra:</p>
+<ul>
+<li>Om alle de angivne indholdspunkter dækkes</li>
+<li>Om teksten er sammenhængende, struktureret og på relevant længde</li>
+<li>Sproglig korrekthed (grammatik, ordforråd, stavning)</li>
+<li>Stilregister (formel eller uformel) afhængigt af opgaven</li>
+</ul>
+<p>En god besvarelse i Delprøve&nbsp;1 følger de fire punkter og anvender passende høfligheds- eller informationsfraser. I Delprøve&nbsp;2 bør besvarelsen være en personlig e‑mail med hilsen, svar på underviserens spørgsmål og en opmuntring.</p>
+<div class="spacer"></div>
+
+<h2 id="mundtlig-kommunikation">Mundtlig kommunikation</h2>
+<p>Der er heller ingen facit til den mundtlige del, da præstationen vurderes på:</p>
+<ul>
+<li>Sprogbrug (grammatik, udtale og ordforråd)</li>
+<li>Indholdsrigdom og relevans i præsentation og samtale</li>
+<li>Struktur og sammenhæng i fremstillingen</li>
+<li>Interaktion med eksaminator og medprøvedeltager (evne til at stille og besvare spørgsmål)</li>
+</ul>
+<p>Prøvedeltageren bør forberede sig på at fortælle sammenhængende om et personligt emne og være klar til at beskrive, diskutere og reflektere over billederne i Delprøve&nbsp;2 samt engagere sig aktivt i samtalen.</p>
+
+	
+
+</body></html>

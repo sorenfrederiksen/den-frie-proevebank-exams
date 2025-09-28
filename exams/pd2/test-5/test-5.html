@@ -1,0 +1,655 @@
+<!DOCTYPE html><html><head><title>Prøve i Dansk&nbsp;2 - Practice Test 5</title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 3px solid var(--color-front-page-red)
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="prøve-i-dansk-2-practice-test-5">Prøve i Dansk&nbsp;2 <em>Practice Test&nbsp;5</em></h1>
+<div class="logo-wrapper">
+  <img class="logo" src="../../../assets/christianshavn-kanal-line-drawing.png">
+</div>
+
+<div class="columns">
+
+<div class="column">
+
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Læseforståelse (90 minutter)<ul>
+<li>Delprøve 1</li>
+<li>Delprøve 2</li>
+</ul>
+</li>
+<li>Skriftlig fremstilling (90 minutter)</li>
+<li>Mundtlig kommunikation (20 minutter)</li>
+</ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+</div>
+
+</div>
+
+<hr class="front-page-line">
+
+<p><em>This practice test was generated by Den&nbsp;Frie&nbsp;Prøvebank and is unofficial. Den&nbsp;Frie&nbsp;Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+<div class="page-break"></div>
+
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1-30-minutter">Delprøve&nbsp;1 (30&nbsp;minutter)</h3>
+<p><strong>Ingen hjælpemidler tilladt</strong></p>
+<h4 id="opgave-1">Opgave&nbsp;1</h4>
+<p>Nedenfor finder du fire opslagstekster (A–D) fra brochurer, pjecer og hjemmesider. Læs dem alle grundigt. Der er seks spørgsmål til teksterne.</p>
+<p><strong>Tekst&nbsp;A: Det nye idrætscenter – et aktivt samlingspunkt</strong>  </p>
+<p>Idrætscentret “EnergiHuset” åbnede i 2003 og har siden udviklet sig til et populært mødested for alle, der vil dyrke motion eller mødes socialt. I den nyrenoverede bygning finder du en stor sportshal, to fitnessrum, en svømmehal og en sauna. Svømmehallen er åben fra kl.&nbsp;6.00 til 20.00 alle hverdage, mens hallen lukker kl.&nbsp;22.00. I weekenden er der familie­svømning fra kl.&nbsp;9.00–15.00.  </p>
+<p>Centret tilbyder holdtræning som badminton, zumba, holdspinning og børnerytmik. Udenfor er der en løbebane og et udendørs fitnessområde, der kan benyttes gratis. Et årskort koster 1.200&nbsp;kr., mens månedskort kan købes for 150&nbsp;kr. Pensionister og studerende får rabat, og børn under 14&nbsp;år har gratis adgang i følge med en voksen. Idrætscentret drives i samarbejde med frivillige, som står for caféen og hjælper ved arrangementer. Har du forslag til nye aktiviteter, kan du henvende dig til centerlederen eller skrive via hjemmesiden.  </p>
+<p><strong>Tekst&nbsp;B: Åben læringscafé – øv dansk i hyggelige rammer</strong>  </p>
+<p>“Det åbne laboratorium” i lokalbibliotekets mødelokale giver voksne udlændinge mulighed for at øve dansk i et afslappet miljø. Frivillige med dansk som modersmål leder samtalerne om hverdag, arbejde, kultur og aktuelle emner. Gruppen mødes hver onsdag og fredag kl.&nbsp;16.30–18.30, og der kræves ingen tilmelding. Du dukker bare op, og der er kaffe, te og småkager.  </p>
+<p>Deltagerne bliver inddelt i små grupper, så alle kommer til orde. Du kan medbringe aviser, fotos eller emner, du gerne vil diskutere. Det er gratis at deltage, og børn er velkomne, men der er ingen børnepasning. Målet er at skabe et trygt og hyggeligt sted, hvor man kan forbedre sproget og lære nye mennesker at kende. Har du spørgsmål eller ønsker at melde dig som frivillig, kan du kontakte bibliotekaren på telefon eller via hjemmesiden.  </p>
+<p><strong>Tekst&nbsp;C: Grøn transport i hverdagen – gør din rejse bæredygtig</strong>  </p>
+<p>På kommunens klimahjemmeside findes en guide med ideer til at reducere transportens klimaaftryk. Guiden anbefaler, at man cykler eller går kortere ture i stedet for at tage bilen. Hvis man bor længere væk, kan man kombinere cykel og bus eller tog. Kommunen tilbyder gratis cykelservice på torvet den første lørdag i måneden og rabat på månedskort til busserne.  </p>
+<p>Et andet fokus er samkørsel: Ved at dele bilen med naboer eller kolleger kan man spare brændstof og mindske trafik. Der er også information om elbiler, ladestationer og tilskud til dem, der ønsker at skifte fra benzin til el. Endelig opfordres der til at planlægge indkøb og ærinder, så man undgår unødige ture. På hjemmesiden finder du beregningsværktøjer, der viser, hvor meget CO₂ du kan spare ved små ændringer i hverdagen.  </p>
+<p><strong>Tekst&nbsp;D: Mentorprogrammet “Unge&nbsp;på&nbsp;vej” – giv din tid videre</strong>  </p>
+<p>Kommunens mentorprogram “Unge&nbsp;på&nbsp;vej” matcher unge mellem 13 og 18&nbsp;år, som mangler støtte, med voksne frivillige. Som mentor mødes du med en ung en gang om ugen i cirka to timer for at snakke om skole, fritid og fremtid. Målet er at skabe trygge relationer, give støtte til lektier og inspirere til uddannelse eller job.  </p>
+<p>Alle mentorer deltager i et introduktionskursus, hvor de lærer om unge menneskers trivsel og kommunikation. Man forpligter sig i mindst et år og skal fremvise børneattest. Udgifter til fælles aktiviteter som cafébesøg eller biograf dækkes af programmet. Tilmelding sker via kommunens frivilligportal, og du kan også få rådgivning ved at møde op på frivilligcenterets åbningstider mandag kl.&nbsp;15.00–17.00.</p>
+<div class="page-break"></div>
+
+<h5 id="spørgsmål-til-teksterne">Spørgsmål til teksterne</h5>
+<ol>
+<li>Hvor meget koster et årskort til idrætscentret “EnergiHuset”?  <hr class="line-for-written-answer"></li>
+<li>Hvornår kan man komme til familie­svømning i svømmehallen?  <hr class="line-for-written-answer"></li>
+<li>Hvilke dage mødes deltagerne i læringscaféen “Det åbne laboratorium”?  <hr class="line-for-written-answer"></li>
+<li>Nævn ét råd om bæredygtig transport fra kommunens guide.  <hr class="line-for-written-answer"></li>
+<li>Hvor ofte skal en mentor mødes med den unge i mentorprogrammet “Unge&nbsp;på&nbsp;vej”?  <hr class="line-for-written-answer"></li>
+<li>Hvad kræves der, før man kan blive godkendt som mentor?  <hr class="line-for-written-answer"></li>
+</ol>
+<div class="page-break"></div>
+
+<h4 id="opgave-2">Opgave&nbsp;2</h4>
+<p>Nedenfor finder du ni korte tekster (A–I), fx annoncer og opslag. De enkelte tekster identificeres ved et bogstav. Der er syv sætninger (1–7), som skal matches med teksterne. Sæt kun ét bogstav ved hver sætning.</p>
+<p><strong>A.</strong> <em>Fodboldtræner søges</em> – Vores lokale U10‑hold mangler en frivillig træner. Træning foregår tirsdag og torsdag kl.&nbsp;17.00–18.30. Erfaring er en fordel, men ikke et krav. Ring til 41&nbsp;25&nbsp;78&nbsp;63.  </p>
+<p><strong>B.</strong> <em>Sommerkoncert</em> – Gratis koncert fredag kl.&nbsp;19.00 på torvet. Kom og hør lokale bands under åben himmel. Medbring tæppe og picnickurv. Alle er velkomne.  </p>
+<p><strong>C.</strong> <em>Nøgler fundet</em> – Et bundt nøgler med en blå nøglering er fundet ved busstoppestedet på Stationstorvet. Kan afhentes i servicecentret mellem kl.&nbsp;9.00–15.00.  </p>
+<p><strong>D.</strong> <em>Loppemarked</em> – Reservér en stand til søndagens loppemarked i hallen. Pris: 50&nbsp;kr. pr. stand. Tilmeld dig på <a href="http://www.markedet.dk">www.markedet.dk</a> eller ring 56&nbsp;78&nbsp;34&nbsp;12.  </p>
+<p><strong>E.</strong> <em>Fællesspisning</em> – Kom til fællesspisning mandag kl.&nbsp;18.00 i forsamlingshuset. Medbring en ret til buffeten; drikkevarer sælges. Arrangementet er gratis.  </p>
+<p><strong>F.</strong> <em>Vikar søges til butik</em> – Lille butik søger deltidsvikar ca. 20&nbsp;timer om ugen, primært eftermiddag og weekend. Send ansøgning senest 10.&nbsp;oktober til <a href="mailto:butik@handel.dk">butik@handel.dk</a>.  </p>
+<p><strong>G.</strong> <em>Gratis cykelservice</em> – Kommunen tilbyder gratis eftersyn af cykler lørdag kl.&nbsp;9.00–12.00 på torvet. Få tjekket bremser og lygter, mens du venter. Ingen tilmelding nødvendig.  </p>
+<p><strong>H.</strong> <em>Strikkeklub</em> – Kan du lide at strikke? Mød andre entusiaster den anden onsdag i hver måned kl.&nbsp;19.00 i kulturhuset. Medbring eget garn og pinde. Gratis deltagelse.  </p>
+<p><strong>I.</strong> <em>Tandlægepraktik</em> – Moderne klinik søger tandlægeassistent på fuld tid. Erfaring foretrækkes. Send CV og ansøgning til <a href="mailto:klinik@smil.dk">klinik@smil.dk</a>.</p>
+<div class="spacer"></div>
+
+<p><strong>Sætninger:</strong></p>
+<p><em>Sæt kun ét bogstav ved hver sætning.</em></p>
+<ol>
+<li>Jeg er på udkig efter et deltidsjob i en butik med ansøgning inden 10.&nbsp;oktober. _________  </li>
+<li>Mine nøgler blev fundet ved et busstoppested – hvem kontakter jeg? _________  </li>
+<li>Jeg vil gerne høre gratis musik under åben himmel fredag. _________  </li>
+<li>Jeg elsker håndarbejde og vil møde andre, der strikker. _________  </li>
+<li>Jeg vil gerne vide, hvad det koster at leje en bod til loppemarkedet på søndag. _________  </li>
+<li>Min cykel trænger til et eftersyn; hvor kan jeg få det gratis lørdag? _________  </li>
+<li>Jeg vil være frivillig træner for et børnefodboldhold; hvornår træner de? _________</li>
+</ol>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2-60-minutter">Delprøve&nbsp;2 (60&nbsp;minutter)</h3>
+<p><strong>Ingen hjælpemidler tilladt</strong></p>
+<h4 id="opgave-3">Opgave&nbsp;3</h4>
+<p>Læs nedenstående fortælling. I teksten er der fjernet ni ord. Ordene findes i listen under teksten sammen med fem ekstra ord, der ikke passer.</p>
+<p><strong>Tekst:</strong><br>Ahmed flyttede til Danmark for to år siden. I starten var alt nyt, og han kendte ingen i byen. Han begyndte på en danskuddannelse og mødte andre <strong>(1)</strong> ______ udlændinge. Vejret virkede meget <strong>(2)</strong> ______ om vinteren, og han savnede solen fra sit hjemland. Han ringede ofte til sin familie for at <strong>(3)</strong> ______ med dem.  </p>
+<p>Snart fandt han et frivilligt arbejde i <strong>(4)</strong> ______, hvor han hjalp børn med at spille fodbold. Der lærte han nye <strong>(5)</strong> ______ og forbedrede sin danske udtale. Hans <strong>(6)</strong> ______ for dansk mad voksede også, især efter at have smagt smørrebrød og kanelsnegle. Han udviklede en god <strong>(7)</strong> ______ til sin lærer, som motiverede ham til at fortsætte, selv når det var <strong>(8)</strong> ______. I dag føler han sig <strong>(9)</strong> ______ i lokalsamfundet og har lyst til at hjælpe andre nytilflyttede.</p>
+<div class="spacer"></div>
+
+<p><strong>Ord til brug (ni passer, fem er distraktorer):</strong></p>
+<p><em>Noter: Skriv det korrekte ord i hver blank. Ét ord må kun bruges én gang.</em></p>
+<div class="columns">
+  <ul class="column">
+    <li>nytilflyttede</li>
+    <li>kolde</li>
+    <li>ringe</li>
+    <li>sportsklubben</li>
+    <li>venner</li>
+    <li>relation</li>
+    <li>aktiv</li>
+  </ul>
+  <ul class="column">
+    <li>kammeratskab</li>
+    <li>plan</li>
+    <li>smag</li>
+    <li>samfund</li>
+    <li>svært</li>
+    <li>træne</li>
+    <li>værdier</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h4 id="opgave-4">Opgave&nbsp;4</h4>
+<p>Læs teksten nedenfor. Den består af seks afsnit. I hvert afsnit er der fjernet én sætning. Efter teksten finder du otte sætninger (A–H), hvoraf seks passer i hullerne. To sætninger er distraktorer.</p>
+<p><strong>Tekst:</strong>  </p>
+<p><strong>Afsnit&nbsp;1</strong>  </p>
+<p>Jesper havde altid elsket at bage. Som barn stod han ved siden af sin bedstemor i køkkenet og duftede til kagerne. Som voksen arbejdede han som mekaniker, men drømmen om eget bageri blev stærkere hvert år. <strong>(1)</strong> ______  </p>
+<p><strong>Afsnit&nbsp;2</strong>  </p>
+<p>Han fandt en lille butik på en stille gade og gik i gang med at renovere den. I begyndelsen måtte han stå op før solen for at ælte dej og bage brød. <strong>(2)</strong> ______  </p>
+<p><strong>Afsnit&nbsp;3</strong>  </p>
+<p>Efterhånden som rygtet spredte sig, kom der flere kunder, og Jesper begyndte at udvide sortimentet med kager og croissanter. <strong>(3)</strong> ______ Hans mor hjalp ham ofte i weekenderne, og venner kiggede forbi med gode idéer.  </p>
+<p><strong>Afsnit&nbsp;4</strong>  </p>
+<p>Jesper deltog på lokale markeder og tilbød brød lavet med økologiske råvarer. Hans rugbrød blev kåret til byens bedste. <strong>(4)</strong> ______  </p>
+<p><strong>Afsnit&nbsp;5</strong>  </p>
+<p>Efter nogle år overvejede han at åbne endnu en butik i nabobyen. Han vidste dog, at en større forretning ville kræve mere personale og mindre tid i bageriet. <strong>(5)</strong> ______  </p>
+<p><strong>Afsnit&nbsp;6</strong>  </p>
+<p>Når Jesper nu ser tilbage, føler han sig stolt over at have forfulgt sin passion. Han har også begyndt at arrangere bagekurser for børn og voksne i weekenden. <strong>(6)</strong> ______ Han håber at inspirere andre til at følge deres drømme.</p>
+<div class="page-break"></div>
+
+<p><strong>Sætninger (A–H):</strong></p>
+<p><em>Skriv bogstavet for den rigtige sætning ved hver 1&nbsp;–&nbsp;6. To sætninger skal ikke bruges.</em></p>
+<ul class="multiple-choice-answers">
+  <li>Han sparede op og tog et kursus i iværksætteri.</li>
+  <li>Det var hårdt arbejde, men snart begyndte folk at tale om hans gode boller.</li>
+  <li>Til sidst ansatte han sin første lærling til at hjælpe med de mange ordrer.</li>
+  <li>Han samarbejdede med lokale landmænd for at få frisk mel og økologisk smør.</li>
+  <li>Han tøvede, fordi han ikke ville miste den nære kontakt til kunderne.</li>
+  <li>Han nød at undervise børn i at bage i sin fritid.</li>
+  <li>I barndommen hjalp han sin bedstemor med at samle æg til kagerne.</li>
+  <li>Han havde altid drømt om at rejse verden rundt.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h4 id="opgave-5">Opgave&nbsp;5</h4>
+<p>Du skal læse et interview med en person. Teksten består af otte afsnit (A–H). Der er fem spørgsmål til teksten. Sæt bogstavet for det afsnit, der indeholder svaret, ved hvert spørgsmål.</p>
+<p><strong>Tekst:</strong>  </p>
+<p><strong>Afsnit&nbsp;A</strong>  </p>
+<p>Mikkel Jensen er 29&nbsp;år og arbejder som paramediciner. Han bor i et rækkehus i forstaden sammen med sin kæreste og deres lille søn på tre.  </p>
+<p><strong>Afsnit&nbsp;B</strong>  </p>
+<p>Efter gymnasiet begyndte Mikkel at læse til sygeplejerske. Han har altid ønsket at hjælpe andre, og under studiet fandt han ud af, at arbejdet i en ambulance tiltalte ham.  </p>
+<p><strong>Afsnit&nbsp;C</strong>  </p>
+<p>I dag er han ansat ved den regionale ambulancetjeneste. Vagterne kan være lange og uforudsigelige, men han elsker adrenalinen og følelsen af at gøre en forskel i akutte situationer.  </p>
+<p><strong>Afsnit&nbsp;D</strong>  </p>
+<p>For nylig har Mikkel taget efteruddannelse i psykisk førstehjælp. Han mener, det er vigtigt at kunne støtte pårørende og patienter også mentalt i pressede situationer.  </p>
+<p><strong>Afsnit&nbsp;E</strong>  </p>
+<p>En af de største udfordringer i hans job er at håndtere de følelser, som følger med. “Nogle dage er meget tunge,” siger han. “Jeg løber en tur eller taler med mine kolleger for at bearbejde indtrykkene.”  </p>
+<p><strong>Afsnit&nbsp;F</strong>  </p>
+<p>Når han ikke er på arbejde, nyder Mikkel at spille guitar, løbe i skoven og læse krimier. Han og familien tager også gerne på camping i weekenderne.  </p>
+<p><strong>Afsnit&nbsp;G</strong>  </p>
+<p>Mikkel bruger også tid på at undervise unge i førstehjælp i det lokale ungdomshus. Han håber at inspirere flere til at lære livreddende teknikker.  </p>
+<p><strong>Afsnit&nbsp;H</strong>  </p>
+<p>På længere sigt drømmer Mikkel om at starte et program, der rekrutterer flere paramedicinere, og måske at rejse et år med sin familie for at opleve verden.</p>
+<div class="page-break"></div>
+
+<h5 id="spørgsmål">Spørgsmål</h5>
+<ol>
+<li>I hvilket afsnit beskrives Mikkels familieliv?  <hr class="line-for-written-answer"></li>
+<li>Hvorfor valgte Mikkel at arbejde som paramediciner?  <hr class="line-for-written-answer"></li>
+<li>Hvad er en af de største udfordringer i Mikkels arbejde?  <hr class="line-for-written-answer"></li>
+<li>Hvad laver Mikkel i sin fritid?  <hr class="line-for-written-answer"></li>
+<li>Hvad drømmer Mikkel om at gøre i fremtiden?  <hr class="line-for-written-answer"></li>
+</ol>
+<div class="page-break"></div>
+
+<h2 id="skriftlig-fremstilling-90-minutter--alle-ordbøger-tilladt">Skriftlig fremstilling (90&nbsp;minutter – alle ordbøger tilladt)</h2>
+<h3 id="delprøve-1--vælg-enten-1a-eller-1b">Delprøve&nbsp;1 – vælg enten&nbsp;1A eller&nbsp;1B</h3>
+<p><strong>1A.</strong> Du pendler hver dag med bussen til arbejde. De seneste måneder er busserne ofte forsinkede eller kommer slet ikke, især om morgenen. Du ønsker at klage til transportselskabet og foreslå en løsning. Skriv en halvformel henvendelse på ca. 150–200&nbsp;ord, hvor du:</p>
+<ul>
+<li>beskriver problemet med bussernes forsinkelser og tidspunktet på dagen  </li>
+<li>fortæller, hvordan det påvirker dig og andre passagerer  </li>
+<li>nævner, at du har forsøgt at tale med chaufføren uden resultat  </li>
+<li>foreslår, hvad transportselskabet kan gøre for at løse problemet</li>
+</ul>
+<p><strong>1B.</strong> Din nabo har åbnet en lille genbrugsbutik med tøj og møbler og beder dig om at skrive et opslag til deres hjemmeside, der skal tiltrække nye kunder. Skriv en halvformel tekst på ca.&nbsp;150–200&nbsp;ord, hvor du:</p>
+<ul>
+<li>beskriver butikkens beliggenhed og indretning  </li>
+<li>fortæller om udvalget af varer og særlige tilbud  </li>
+<li>fremhæver atmosfæren og serviceniveauet  </li>
+<li>opfordrer folk til at komme forbi og dele opslaget</li>
+</ul>
+<h3 id="delprøve-2">Delprøve&nbsp;2</h3>
+<p>Du har netop afsluttet et madlavningskursus. Din underviser sender dig en e‑mail, hvor hun beder dig om at skrive et kort brev til en kommende kursist, som overvejer at starte på kurset. Skriv en uformel e‑mail på mindst 100&nbsp;ord, hvor du:</p>
+<ul>
+<li>hilser pænt og præsenterer dig selv  </li>
+<li>fortæller kort om, hvordan kurset var opbygget  </li>
+<li>beskriver, hvad du lærte, og hvordan du brugte det i hverdagen  </li>
+<li>giver din mening om underviseren og gruppedynamikken  </li>
+<li>opmuntrer kursisten til at tilmelde sig og tilbyder at besvare spørgsmål</li>
+</ul>
+<div class="page-break"></div>
+
+<p><em>Brug disse sider til at skrive din skriftlige opgave.</em></p>
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<h2 id="mundtlig-kommunikation-20-minutter-for-to-prøvedeltagere">Mundtlig kommunikation (20&nbsp;minutter for to prøvedeltagere)</h2>
+<h3 id="delprøve-1-ca-10-minutter-i-alt">Delprøve&nbsp;1 (ca.&nbsp;10&nbsp;minutter i alt)</h3>
+<p>Hver prøvedeltager forbereder og holder en præsentation på ca.&nbsp;1½&nbsp;minut om et selvvalgt emne fra sin hverdag, fx arbejde, fritidsinteresser, familie, bolig eller en tradition. Efter præsentationen interviewer eksaminator prøvedeltageren i ca.&nbsp;3½&nbsp;minut med spørgsmål, der uddyber emnet.  </p>
+<p><strong>Fokus:</strong> Evne til at fortælle sammenhængende om personligt erfarede forhold og at forstå og besvare spørgsmål fra eksaminator.</p>
+<h3 id="delprøve-2-ca-10-minutter-i-alt">Delprøve&nbsp;2 (ca.&nbsp;10&nbsp;minutter i alt)</h3>
+<p>Der er tre emner (A,&nbsp;B og&nbsp;C) om konkrete hverdagsforhold. Til hvert emne hører to billeder (Billede&nbsp;1 og Billede&nbsp;2), som illustrerer en situation. Prøvedeltagerne vælger ét emne. Først interviewer eksaminator hver prøvedeltager enkeltvis om det valgte billede. Derefter følger en samtale mellem de to prøvedeltagere, hvor de taler sammen på baggrund af en case, som eksaminator præsenterer. Eksaminator fungerer som mediator og sørger for, at begge prøvedeltagere kommer til orde.</p>
+<div class="page-break"></div>
+
+<p><strong>Emner og billeder:</strong></p>
+<ul>
+<li><strong>Emne&nbsp;A: Arbejdsliv og hjemmearbejde</strong></li>
+</ul>
+<p>Mange virksomheder overvejer at lade medarbejderne arbejde hjemme flere dage om ugen. Diskutér fordele og ulemper for produktivitet, arbejdsmiljø og socialt samvær, og kom med forslag til, hvordan man kan sikre god trivsel og samarbejde, når nogle arbejder hjemme, og andre møder fysisk.  </p>
+<img alt="Billede&nbsp;1 viser en person, der arbejder på en bærbar computer ved køkkenbordet med en kop kaffe og et barn, der leger i baggrunden." src="./test-5-grafik-1.webp" class="topic-picture">
+
+<img alt="Billede&nbsp;2 viser et åbent kontorlandskab, hvor flere kolleger sidder omkring et bord og arbejder sammen med papirer og laptops." src="./test-5-grafik-2.webp" class="topic-picture">
+
+<div class="page-break"></div>
+
+<ul>
+<li><strong>Emne&nbsp;B: Lokale markeder og fødevarekvalitet</strong></li>
+</ul>
+<p>Kommunen overvejer at bygge et stort supermarked uden for byen, hvilket kan påvirke de eksisterende torvedage og gårdbutikker. Diskutér fordele og ulemper for forbrugere, lokale producenter og miljøet, og kom med idéer til, hvordan man kan støtte både lokale markeder og tilgængelighed til dagligvarer.  </p>
+<img alt="Billede&nbsp;1 viser mennesker, der handler friske grøntsager og frugt på et udendørs marked med boder og kurve." src="./test-5-grafik-3.webp" class="topic-picture">
+
+<img alt="Billede&nbsp;2 viser kunder med indkøbsvogne i et stort supermarked med lange hylder fyldt med varer." src="./test-5-grafik-4.webp" class="topic-picture">
+
+<div class="page-break"></div>
+
+<ul>
+<li><strong>Emne&nbsp;C: Skærmtid for børn</strong></li>
+</ul>
+<p>Efter skoletid tilbringer mange børn tid foran skærme. Kommunen ønsker at begrænse skærmtiden i SFO'er og klubber og i stedet fremme fysisk aktivitet og kreative projekter. Diskutér fordele og ulemper ved digital underholdning versus udendørs lege, og kom med forslag til, hvordan man kan finde en balance mellem skærm og leg.  </p>
+<img alt="Billede&nbsp;1 viser en gruppe børn, der spiller fodbold og tegner i en park under opsyn af en voksen." src="./test-5-grafik-5.webp" class="topic-picture">
+
+<img alt="Billede&nbsp;2 viser børn, der sidder i en sofa og spiller på tablets, mens en fjernsynsskærm kører i baggrunden." src="./test-5-grafik-6.webp" class="topic-picture">
+
+<hr>
+<p><em>This practice test was generated by Den&nbsp;Frie&nbsp;Prøvebank and is unofficial. Den&nbsp;Frie&nbsp;Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+
+	
+
+</body></html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html><html><head><title>Studieprøven - Practice Test 2</title><meta charset="utf-8"><style>/** Variables */
+:root {
+  --color-front-page-red: rgb(165 56 34);
+  --color-text: #000;
+  --color-soft-text: #a2a2a2;
+  --color-soft-text-2: #dfdfdf;
+  --color-soft-text-3: #f1f0f0;
+  --unit: 8px;
+  font-size: 14px;
+}
+
+/** Text */
+p {
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+h1 {
+  color: var(--color-front-page-red);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 em {
+  color: var(--color-text);
+  display: block;
+  font-style: normal;
+}
+
+.disclaimer {
+  color: var(--color-soft-text);
+  font-style: italic;
+}
+
+/** Lists */
+li {
+  margin-block-end: var(--unit);
+}
+
+li:before {
+  margin-left: 0;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.multiple-choice-answers, .multiple-choice-answers li {
+  margin-left: 0;
+  list-style-type: lower-alpha;
+}
+
+.multiple-choice-answers:before {
+  margin-left: 0;
+}
+
+.horizontal-multiple-choice {
+  width: 100%;
+}
+
+.horizontal-multiple-choice td {
+  padding-bottom: 0.5em;
+}
+
+/** Structure */
+.page-break {
+  page-break-after: always;
+}
+
+.line-for-written-answer {
+  margin-top: 2em;
+  display: block;
+}
+
+.line-for-written-answer--multiple-choice {
+  max-width: 60px;
+}
+
+.logo-wrapper {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  overflow-block: hidden;
+  border-block: 4px var(--color-front-page-red) solid;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.front-page-line {
+  margin-top: 24px;
+  border: 0;
+  border-bottom-width: 3px;
+  border-color: var(--color-front-page-red);
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit);
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.spacer {
+  height: 2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+tr {
+  padding: 8px;
+}
+
+td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--color-soft-text-2);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;  
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-soft-text-3);
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/** Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topic-picture {
+  height: 350px;
+  margin-bottom: 1em;
+}
+
+.qr-code {
+  text-align: center;
+  width: 140px;
+}
+
+.qr-code-img {
+  width: 140px;
+  height: 140px;
+  margin-block: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  display: block;
+}
+
+.qr-code-title {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/** Modifiers */
+.m--align-right {
+  align-items: flex-end;
+}
+
+.m--gap-4 {
+  gap: 16px;
+}
+
+.m--padding-v-16 {
+  padding-block: 16px;
+}
+
+.m--flex-column {
+  display: flex;
+  flex-direction: column;
+}/*# sourceURL=./src/styles.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=/Users/dksorfre/personal-workspace/danish-exams/node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/styles/github.css*/</style></head>
+	<body class="">
+		<h1 id="studieprøven-practice-test-2">Studieprøven <em>Practice Test 2</em></h1>
+<div class="logo-wrapper">
+  <img class="logo" src="../../../assets/logo-line-drawing-white.png">
+</div>
+
+<div class="columns">
+
+<div class="column">
+
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Læseforståelse (90 minutter)<ul>
+<li>Delprøve 1</li>
+<li>Delprøve 2A</li>
+<li>Delprøve 2B</li>
+<li>Delprøve 3</li>
+</ul>
+</li>
+<li>Skriftlig fremstilling (3 timer)</li>
+<li>Mundtlig kommunikation (30 minutter)</li>
+</ul>
+</div>
+
+<div class="column m--align-right m--gap-4 m--padding-v-16 m--flex-column">
+
+<div class="qr-code">
+
+<img class="qr-code-img" src="../../../assets/mobile-pay-qr-code-red.png">
+
+<p class="qr-code-title" style="font-size: 9px">
+  Help Den Frie Prøvebank
+</p>
+
+</div>
+
+</div>
+</div>
+
+<hr class="front-page-line">
+
+<p><em>This practice test was generated by Den Frie Prøvebank and is unofficial. Den Frie Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+<div class="page-break"></div>
+
+<h2 id="læseforståelse">Læseforståelse</h2>
+<h3 id="delprøve-1-25-minutter">Delprøve 1 (25 minutter)</h3>
+<p><strong>Ingen hjælpemidler tilladt</strong></p>
+<h4 id="tekstsamling-innovation-og-teknologi-i-danmark">Tekstsamling: Innovation og teknologi i Danmark</h4>
+<p><strong>Tekst A: Dansk sundhedsteknologi</strong>
+Danmark er en global leder inden for sundhedsteknologi og medicinalindustri. Novo Nordisk producerer 50% af verdens insulin og har investeret 18 milliarder kroner i forskning siden 2020. Danske hospitaler bruger AI til diagnosticering, hvilket har reduceret fejldiagnoser med 25%. Telemedicin er blevet udbredt - 40% af konsultationer foregår nu digitalt. Branchen beskæftiger 80.000 personer og eksporterer for 200 milliarder kroner årligt.</p>
+<p><strong>Tekst B: Fintech-revolutionen</strong>
+Danmarks digitale betalingssystemer er blandt verdens mest avancerede. 85% af alle transaktioner foregår kontantløst. MobilePay har 4,2 millioner aktive brugere og behandler 1 milliard transaktioner årligt. Danske banker investerer massivt i blockchain-teknologi og kryptovaluta. Finanssektoren har skabt 15.000 nye tech-job siden 2019.</p>
+<p><strong>Tekst C: Grøn shipping-teknologi</strong>
+Maersk leder udviklingen af klimaneutral shipping. Virksomheden har bestilt 19 metanol-drevne containerskibe til levering i 2025-2027. Danske værfter specialiserer sig i vindmølle-installationsskibe og har 70% af det globale marked. Shipping-industrien investerer 50 milliarder kroner i grønne teknologier de næste fem år.</p>
+<p><strong>Tekst D: Robotik og automation</strong>
+Universal Robots fra Odense har skabt det globale marked for kollaborative robotter. Virksomheden har solgt over 50.000 robotter på verdensplan. Danske fødevarevirksomheder har automatiseret 60% af deres produktionslinjer. Robotteknologi har øget produktiviteten med 35% i fremstillingsindustrien. Danish Technological Institute uddanner 2.000 teknikere i robotik årligt.</p>
+<p><strong>Tekst E: Gaming og digital underholdning</strong>
+IO Interactive, skaberne af Hitman-serien, beskæftiger 400 medarbejdere i København. Den danske gaming-industri omsætter for 8 milliarder kroner årligt og vokser med 15% om året. Copenhagen Game Collective har produceret 50 indie-spil siden 2018. Filmens Hus i København er blevet et center for VR-produktion med 25 virksomheder.</p>
+<div class="page-break"></div>
+
+<h4 id="spørgsmål-til-tekstsamlingen">Spørgsmål til tekstsamlingen:</h4>
+<ol>
+<li>Hvor stor en andel af verdens insulin producerer Novo Nordisk?<hr class="line-for-written-answer"></li>
+<li>Hvor mange milliarder kroner har Novo Nordisk investeret i forskning siden 2020?<hr class="line-for-written-answer"></li>
+<li>Med hvor mange procent har AI reduceret fejldiagnoser på danske hospitaler?<hr class="line-for-written-answer"></li>
+<li>Hvor mange procent af konsultationer foregår nu digitalt?<hr class="line-for-written-answer"></li>
+<li>Hvor mange millioner aktive brugere har MobilePay?<hr class="line-for-written-answer"></li>
+<li>Hvor mange transaktioner behandler MobilePay årligt?<hr class="line-for-written-answer"></li>
+<li>Hvor mange nye tech-job har finanssektoren skabt siden 2019?<hr class="line-for-written-answer"></li>
+<li>Hvor mange metanol-drevne containerskibe har Maersk bestilt?<hr class="line-for-written-answer"></li>
+<li>Hvor stor en andel af det globale marked for vindmølle-installationsskibe har danske værfter?<hr class="line-for-written-answer"></li>
+<li>Hvor mange milliarder kroner investerer shipping-industrien i grønne teknologier?<hr class="line-for-written-answer"></li>
+<li>Hvor mange robotter har Universal Robots solgt på verdensplan?<hr class="line-for-written-answer"></li>
+<li>Med hvor mange procent har robotteknologi øget produktiviteten i fremstillingsindustrien?<hr class="line-for-written-answer"></li>
+<li>Hvor mange medarbejdere beskæftiger IO Interactive?<hr class="line-for-written-answer"></li>
+<li>Med hvor mange procent vokser den danske gaming-industri årligt?<hr class="line-for-written-answer"></li>
+<li>Hvor mange indie-spil har Copenhagen Game Collective produceret siden 2018?<hr class="line-for-written-answer"></li>
+</ol>
+<div class="page-break"></div>
+
+<h3 id="delprøve-2a-del-af-65-minutter-samlet-for-2a-2b-og-3">Delprøve 2A (Del af 65 minutter samlet for 2A, 2B og 3)</h3>
+<h4 id="tekst-med-fjernede-afsnit-klimatilpasning-i-danske-byer">Tekst med fjernede afsnit: Klimatilpasning i danske byer</h4>
+<p><em>Sæt bogstavet for den rigtige sætning i hvert felt.</em></p>
+<p>Danske byer står over for stigende udfordringer fra klimaforandringer. Hyppigere ekstremvejr, stigende havniveau og længere tørkeperioder kræver omfattende tilpasninger af den urbane infrastruktur.</p>
+<p><strong>(1)</strong> ________</p>
+<p>København har udviklet en omfattende plan for håndtering af skybrud. Byen investerer 16 milliarder kroner i nye kloaksystemer og blå-grønne infrastrukturer. Parker og pladser designes til at fungere som midlertidige vandreservoirer under kraftige regnskyl.</p>
+<p><strong>(2)</strong> ________</p>
+<p>Aarhus har implementeret innovative løsninger som permeable belægninger og regnvandshaver. Byen har reduceret oversvømmelsesrisikoen med 40% gennem strategisk byplanlægning. Lokale virksomheder udvikler nye materialer til klimaresistent byggeri.</p>
+<p><strong>(3)</strong> ________</p>
+<p>Aalborg fokuserer på kystsikring og havniveaustigning. Byen bygger nye diger og etablerer naturbaserede kystbeskyttelser med klitplantninger og vådområder. Havnearealerne ombygges til at kunne håndtere højere vandstande.</p>
+<p><strong>(4)</strong> ________</p>
+<p>Odense har prioriteret grønne tage og facader som del af klimatilpasningen. 30% af byens tage er nu dækket af vegetation, hvilket reducerer temperaturen og håndterer regnvand. Byen har også etableret urbane skove til CO2-binding.</p>
+<p><strong>(5)</strong> ________</p>
+<p>Internationale eksperter roser danske byers innovative tilgang til klimatilpasning. FN's klimapanel fremhæver Danmark som foregangsland. Danske løsninger eksporteres nu til byer i hele verden og skaber nye forretningsmuligheder.</p>
+<div class="page-break"></div>
+
+<h4 id="fjernede-afsnit-vælg-det-rigtige-for-hver-position">Fjernede afsnit (vælg det rigtige for hver position):</h4>
+<ol>
+<li><p>Afsnit 1</p>
+<ul class="multiple-choice-answers">
+<li>Klimaforandringerne manifesterer sig allerede tydeligt i danske byer. Temperaturer stiger hurtigere i urbane områder end på landet på grund af varmeø-effekten, og dette skaber sundhedsmæssige udfordringer for borgerne.</li>
+<li>Forskere forudser, at situationen vil forværres betydeligt de kommende årtier. Nedbørsmængderne vil blive mere uforudsigelige, og ekstremvejr vil optræde hyppigere og med større intensitet end tidligere.</li>
+<li>Kommunerne har længe undervurderet omfanget af klimaudfordringerne. Først i de seneste år er der kommet reel politisk vilje til at investere de nødvendige ressourcer i forebyggende tiltag.</li>
+</ul>
+</li>
+<li><p>Afsnit 2</p>
+<ul class="multiple-choice-answers">
+<li>Borgerne spiller en central rolle i klimatilpasningen. Mange københavnere har etableret regnvandstanke og permeable indkørsler på deres private ejendomme for at reducere belastningen på kloaksystemerne.</li>
+<li>Teknologiske innovationer driver udviklingen frem. Sensorer og dataanalyse gør det muligt at forudsige og håndtere vejrbegivenheder mere effektivt end nogensinde før.</li>
+<li>Samarbejdet med private aktører er afgørende for succesen. Byggevirksomheder og arkitekter udvikler nye standarder for klimaresistent construction, som gradvist implementeres i hele branchen.</li>
+</ul>
+</li>
+<li><p>Afsnit 3</p>
+<ul class="multiple-choice-answers">
+<li>Finansieringen af klimatilpasning er en stor udfordring. Projekterne kræver enorme investeringer, som mange kommuner har svært ved at rejse uden statslig støtte og EU-midler.</li>
+<li>Borgerne er generelt positive over for de grønne tiltag. Meningsmålinger viser, at 75% af aarhusianerne støtter investeringerne i klimatilpasning, selv om det betyder højere skatter.</li>
+<li>Erhvervslivet ser klimatilpasning som en vækstmulighed. Lokale virksomheder har specialiseret sig i udvikling og produktion af klimateknologi, hvilket skaber arbejdspladser og eksportindtægter.</li>
+</ul>
+</li>
+<li><p>Afsnit 4</p>
+<ul class="multiple-choice-answers">
+<li>Andre danske byer følger nu Aalborgs eksempel med naturbaserede løsninger. Esbjerg og Vejle har iværksat lignende projekter for at beskytte sig mod stigende havniveau.</li>
+<li>EU har valgt Aalborg som pilotby for nye klimatilpasningsstrategier. Erfaringerne fra projektet skal bruges til at udvikle retningslinjer for andre europæiske kystbyer.</li>
+<li>Klimaforandringerne skaber også økonomiske muligheder for Aalborg. Byen tiltrækker grønne investeringer og maritime virksomheder, der specialiserer sig i offshore vindenergi.</li>
+</ul>
+</li>
+<li><p>Afsnit 5</p>
+<ul class="multiple-choice-answers">
+<li>Fremtiden kræver endnu mere ambitiøse tiltag. Danske byer arbejder på at blive CO2-negative inden 2040 gennem avancerede teknologier som carbon capture og lagring.</li>
+<li>Den grønne omstilling har sociale konsekvenser, som kræver opmærksomhed. Det er vigtigt at sikre, at klimatilpasning ikke øger uligheden mellem forskellige kvarterer og befolkningsgrupper.</li>
+<li>Succesen skaber forpligtelser over for andre lande. Danmark skal nu hjælpe udviklingslande med at implementere lignende løsninger og dele viden om bæredygtig byudvikling.</li>
+</ul>
+<div class="page-break"></div></li>
+</ol>
+<h3 id="delprøve-2b-del-af-65-minutter-samlet-for-2a-2b-og-3">Delprøve 2B (Del af 65 minutter samlet for 2A, 2B og 3)</h3>
+<h4 id="tekst-fremtidens-velfærdsstat-i-danmark">Tekst: Fremtidens velfærdsstat i Danmark</h4>
+<p>Den danske velfærdsmodel står over for grundlæggende udfordringer, der vil kræve omfattende reformer i de kommende årtier. Den demografiske udvikling med en aldrende befolkning presser økonomien, mens globalisering og teknologisk udvikling ændrer arbejdsmarkedets karakter.</p>
+<p>Befolkningens alderssammensætning udvikler sig dramatisk. I 2040 vil der være 1,5 millioner danskere over 67 år sammenlignet med 1 million i dag. Samtidig falder antallet af personer i den erhvervsaktive alder. Dette betyder, at færre arbejdende skal finansiere velfærd til flere pensionister og skaber et grundlæggende problem for skattefinansiering af de offentlige ydelser.</p>
+<p>Automatisering og kunstig intelligens ændrer arbejdsmarkedet fundamentalt. Mange traditionelle job forsvinder, mens der opstår behov for nye kompetencer. Det kræver massive investeringer i uddannelse og omskoling. Samtidig kan teknologien også forbedre effektiviteten i den offentlige sektor og reducere omkostningerne til administration og service.</p>
+<p>Globaliseringen skaber både muligheder og trusler for velfærdsstaten. International konkurrence presser danske virksomheder til at være mere produktive, men skaber også et pres for at sænke skatter og sociale ydelser. EU's regler begrænser Danmarks muligheder for at føre en selvstændig socialpolitik, mens migration fra andre EU-lande kan belaste de sociale systemer.</p>
+<p>Klimaforandringerne vil kræve enorme investeringer i grøn omstilling, som konkurrerer med velfærdsinvesteringer om de offentlige ressourcer. Samtidig kan klimatilpasning og grøn teknologi skabe nye arbejdspladser og eksportmuligheder, der styrker den økonomiske base for velfærdsstaten.</p>
+<p>Borgernes forventninger til velfærdsstaten ændrer sig også. Yngre generationer ønsker mere fleksible og personaliserede offentlige services, mens ældre generationer prioriterer stabilitet og tryghed. Teknologiske muligheder skaber forventninger om hurtigere og mere effektiv service, hvilket kræver digitalisering af den offentlige sektor.</p>
+<p>Politiske løsninger må balancere disse forskellige hensyn. Nogle foreslår højere pensionsalder og lavere offentlige ydelser, mens andre ønsker øgede skatter på høje indkomster og formuer. Teknologioptimister peger på, at automatisering kan reducere behovet for menneskelig arbejdskraft i både private og offentlige sektorer.</p>
+<div class="page-break"></div>
+
+<h4 id="spørgsmål-til-teksten">Spørgsmål til teksten:</h4>
+<p><em>Sæt en cirkel om det rigtige svar.</em></p>
+<ol>
+<li><p>Hvor mange danskere over 67 år forventes der at være i 2040?</p>
+<ul class="multiple-choice-answers">
+<li><p>1 million</p></li><p></p>
+
+<li><p>1,5 millioner</p></li><p></p>
+
+<li><p>2 millioner</p></li><p></p>
+</ul>
+</li>
+<li><p>Hvad er det grundlæggende problem med den demografiske udvikling for velfærdsstaten?</p>
+<ul class="multiple-choice-answers">
+<li><p>For mange unge mennesker uddanner sig ikke</p></li><p></p>
+
+<li><p>Færre arbejdende skal finansiere velfærd til flere pensionister</p></li><p></p>
+
+<li><p>Indvandring belaster de sociale systemer</p></li><p></p>
+</ul>
+</li>
+<li><p>Hvordan kan teknologien potentielt hjælpe velfærdsstaten ifølge teksten?</p>
+<ul class="multiple-choice-answers">
+<li><p>Ved at skabe flere traditionelle arbejdspladser</p></li><p></p>
+
+<li><p>Ved at forbedre effektiviteten i den offentlige sektor</p></li><p></p>
+
+<li><p>Ved at reducere behovet for uddannelse</p></li><p></p>
+</ul>
+</li>
+<li><p>Hvilken udfordring skaber globaliseringen for den danske velfærdsmodel?</p>
+<ul class="multiple-choice-answers">
+<li><p>Pres for at sænke skatter og sociale ydelser på grund af international konkurrence</p></li><p></p>
+
+<li><p>Større efterspørgsel efter danske produkter</p></li><p></p>
+
+<li><p>Mindre behov for internationale samarbejder</p></li><p></p>
+</ul>
+</li>
+<li><p>Hvad karakteriserer forskellen mellem generationernes forventninger til velfærdsstaten?</p>
+<ul class="multiple-choice-answers">
+<li><p>Ældre ønsker digitalisering, yngre ønsker stabilitet</p></li><p></p>
+
+<li><p>Alle generationer ønsker det samme</p></li><p></p>
+
+<li><p>Yngre ønsker fleksible services, ældre prioriterer stabilitet</p></li><p></p>
+</ul></li>
+</ol>
+<div class="page-break"></div>
+
+<h3 id="delprøve-3-del-af-65-minutter-samlet-for-2a-2b-og-3">Delprøve 3 (Del af 65 minutter samlet for 2A, 2B og 3)</h3>
+<h4 id="tekst-med-fjernede-ord-den-danske-fødevareindustris-globale-ambitioner">Tekst med fjernede ord: Den danske fødevareindustris globale ambitioner</h4>
+<p>Danmarks fødevareindustri har <strong>(1)</strong> ______ sig fra en primært hjemmemarkedsorienteret sektor til en <strong>(2)</strong> ______ eksportvirksomhed. I dag eksporterer Danmark fødevarer for over 170 milliarder kroner årligt til markeder <strong>(3)</strong> ______ hele verden.</p>
+<p>Danske virksomheder som Arla, Danish Crown og Carlsberg har <strong>(4)</strong> ______ globale brands og investerer massivt i internationale ekspansionsstrategier. Arla har <strong>(5)</strong> ______ på markeder i Asien og Mellemøsten, hvor efterspørgslen efter højkvalitets mejeriprodukter vokser <strong>(6)</strong> ______.</p>
+<p>Kvalitet og bæredygtighed er blevet centrale <strong>(7)</strong> ______ i danske fødevarevirksomheders markedsføring. Forbrugere internationalt <strong>(8)</strong> ______ danske produkter med høje standarder for dyrevelfærd, miljøhensyn og fødevaresikkerhed. Dette giver danske virksomheder en <strong>(9)</strong> ______ position på premium-segmenterne.</p>
+<p>Innovation driver også væksten. Danske virksomheder <strong>(10)</strong> ______ nye produkter som plantebaserede alternativer, funktionelle fødevarer og personaliseret ernæring, der møder moderne forbrugertendenser.</p>
+<h4 id="valgmuligheder">Valgmuligheder:</h4>
+<div class="horizontal-multiple-choice">
+
+<table class="horizontal-multiple-choice">
+  <tbody>
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong>a.</strong> ændret</td>
+      <td><strong>b.</strong> udviklet</td>
+      <td><strong>c.</strong> flyttet</td>
+      <td><strong>d.</strong> transformeret</td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td><strong>a.</strong> stor</td>
+      <td><strong>b.</strong> global</td>
+      <td><strong>c.</strong> vigtig</td>
+      <td><strong>d.</strong> moderne</td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td><strong>a.</strong> i</td>
+      <td><strong>b.</strong> over</td>
+      <td><strong>c.</strong> på</td>
+      <td><strong>d.</strong> gennem</td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td><strong>a.</strong> skabt</td>
+      <td><strong>b.</strong> købt</td>
+      <td><strong>c.</strong> udviklet</td>
+      <td><strong>d.</strong> designet</td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td><strong>a.</strong> investeret</td>
+      <td><strong>b.</strong> etableret</td>
+      <td><strong>c.</strong> ekspanderet</td>
+      <td><strong>d.</strong> fokuseret</td>
+    </tr>
+    <tr>
+      <td><strong>6</strong></td>
+      <td><strong>a.</strong> hurtigt</td>
+      <td><strong>b.</strong> langsomt</td>
+      <td><strong>c.</strong> stabilt</td>
+      <td><strong>d.</strong> forsigtigt</td>
+    </tr>
+    <tr>
+      <td><strong>7</strong></td>
+      <td><strong>a.</strong> værdier</td>
+      <td><strong>b.</strong> elementer</td>
+      <td><strong>c.</strong> faktorer</td>
+      <td><strong>d.</strong> områder</td>
+    </tr>
+    <tr>
+      <td><strong>8</strong></td>
+      <td><strong>a.</strong> forbinder</td>
+      <td><strong>b.</strong> sammenligner</td>
+      <td><strong>c.</strong> vurderer</td>
+      <td><strong>d.</strong> køber</td>
+    </tr>
+    <tr>
+      <td><strong>9</strong></td>
+      <td><strong>a.</strong> bedre</td>
+      <td><strong>b.</strong> stærk</td>
+      <td><strong>c.</strong> unik</td>
+      <td><strong>d.</strong> særlig</td>
+    </tr>
+    <tr>
+      <td><strong>10</strong></td>
+      <td><strong>a.</strong> lancer</td>
+      <td><strong>b.</strong> udvikler</td>
+      <td><strong>c.</strong> producerer</td>
+      <td><strong>d.</strong> markedsfører</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="page-break"></div>
+
+<h2 id="skriftlig-fremstilling-3-timer">Skriftlig fremstilling (3 timer)</h2>
+<p><strong>Alle ordbøger er tilladt</strong></p>
+<h3 id="vælg-én-af-følgende-tre-opgaver">Vælg én af følgende tre opgaver:</h3>
+<h4 id="opgave-1-arbejdsløshed-blandt-unge-i-europa">Opgave 1: Arbejdsløshed blandt unge i Europa</h4>
+<p><strong>Grafik:</strong> </p>
+<p><img src="test-2-grafik-1.png" alt="Forestil dig et søjlediagram der viser ungdomsarbejdsløshed i forskellige europæiske lande: Spanien (35%), Italien (28%), Frankrig (22%), Tyskland (15%), Danmark (12%), Sverige (10%)"></p>
+<p><strong>Manchet:</strong> Ungdomsarbejdsløshed er et voksende problem i mange europæiske lande. Unge mennesker mellem 16-24 år har ofte svært ved at finde deres første job, hvilket kan få langsigtede konsekvenser for deres karriere og økonomiske situation.</p>
+<p><strong>Opgave:</strong> Skriv en sammenhængende tekst på minimum 400 ord, hvor du:</p>
+<ul>
+<li>Analyserer og præsenterer data fra grafikken</li>
+<li>Diskuterer mulige årsager til forskelle mellem landene</li>
+<li>Vurderer konsekvenserne af høj ungdomsarbejdsløshed</li>
+<li>Foreslår tiltag til at reducere problemet</li>
+</ul>
+<div class="page-break"></div>
+
+<h4 id="opgave-2-digitalt-forbrug-og-miljøpåvirkning">Opgave 2: Digitalt forbrug og miljøpåvirkning</h4>
+<p><strong>Grafik:</strong> </p>
+<p><img src="test-2-grafik-2.png" alt="Forestil dig et linjediagram der viser stigningen i datakonsumption per person 2020-2024: video streaming øget med 200%, sociale medier med 150%, online gaming med 300%, cloud storage med 250%"></p>
+<p><strong>Manchet:</strong> Vores digitale livsstil forbruger stadig mere energi. Hver gang vi streamer film, deler billeder eller spiller online, bidrager vi til CO2-udslip fra datacentre og netværksinfrastruktur, som mange ikke er bevidste om.</p>
+<p><strong>Opgave:</strong> Skriv en sammenhængende tekst på minimum 400 ord, hvor du:</p>
+<ul>
+<li>Redegør for udviklingen vist i grafikken</li>
+<li>Forklarer sammenhængen mellem digitalt forbrug og miljøpåvirkning</li>
+<li>Diskuterer ansvarsfordelingen mellem individer og virksomheder</li>
+<li>Argumenterer for konkrete løsninger til at reducere digitaliseringens klimaaftryk</li>
+</ul>
+<div class="page-break"></div>
+
+<h4 id="opgave-3-kulturel-diversitet-i-danske-skoler">Opgave 3: Kulturel diversitet i danske skoler</h4>
+<p><strong>Grafik:</strong> </p>
+<p><img src="test-2-grafik-3.png" alt="Forestil dig et cirkeldiagram der viser elevsammensætningen i danske folkeskoler: Dansk baggrund (75%), Vestlig indvandrerbaggrund (8%), Ikke-vestlig indvandrerbaggrund (17%)"></p>
+<p><strong>Manchet:</strong> Danmarks skoler bliver stadig mere multikulturelle. Denne udvikling skaber både muligheder for kulturel læring og udfordringer for undervisningen, da lærere skal håndtere sproglige barrierer og forskellige kulturelle baggrunde.</p>
+<p><strong>Opgave:</strong> Skriv en sammenhængende tekst på minimum 400 ord, hvor du:</p>
+<ul>
+<li>Beskriver den kulturelle sammensætning vist i grafikken</li>
+<li>Analyserer fordele og udfordringer ved kulturel diversitet i skolen</li>
+<li>Diskuterer betydningen for elevernes læring og sociale udvikling</li>
+<li>Vurderer forskellige strategier for at optimere det multikulturelle klasserum</li>
+</ul>
+<div class="page-break"></div>
+
+<p><em>Brug disse sider til at skrive din skriftlige opgave.</em></p>
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+<hr class="line-for-written-answer">
+
+<div class="page-break"></div>
+
+<h2 id="mundtlig-kommunikation-30-minutter-inkl-votering">Mundtlig kommunikation (30 minutter inkl. votering)</h2>
+<h3 id="opgaveark-med-tre-emner-til-forberedelse">Opgaveark med tre emner til forberedelse:</h3>
+<h4 id="emne-1-fremtidens-arbejdsliv-og-work-life-balance">Emne 1: Fremtidens arbejdsliv og work-life balance</h4>
+<p><strong>Stikord til inspiration:</strong></p>
+<ul>
+<li>Fjernarbejde og hjemmekontor</li>
+<li>Firedings arbejdsuge og fleksible timer</li>
+<li>Automatisering og jobsikkerhed</li>
+<li>Stress og mental sundhed på arbejdspladsen</li>
+<li>Livslang læring og kompetenceudvikling</li>
+<li>Generationskonflikter på arbejdsmarkedet</li>
+<li>Ligestilling og forældreorlov</li>
+<li>Gig-economy og freelance-arbejde</li>
+</ul>
+<h4 id="emne-2-social-medier-og-demokrati">Emne 2: Social medier og demokrati</h4>
+<p><strong>Stikord til inspiration:</strong></p>
+<ul>
+<li>Misinformation og fake news</li>
+<li>Polarisering af politiske meninger</li>
+<li>Digitale valgtilkendegivelser og kampagner</li>
+<li>Privatliv og overvågning</li>
+<li>Ungdom og politisk engagement</li>
+<li>Internationale påvirkningskampagner</li>
+<li>Regulering af tech-giganter</li>
+<li>Ytringsfriheden online</li>
+</ul>
+<h4 id="emne-3-bæredygtig-turisme-i-danmark">Emne 3: Bæredygtig turisme i Danmark</h4>
+<p><strong>Stikord til inspiration:</strong></p>
+<ul>
+<li>Overtourisme i populære destinationer</li>
+<li>Klimaaftryk fra transportmidler</li>
+<li>Lokale samfund og turistøkonomi</li>
+<li>Naturbevarelse og adgang til naturen</li>
+<li>Kulturel autenticitet og kommercialisering</li>
+<li>Certificering og miljømærkning</li>
+<li>Alternative turismeformer og slow travel</li>
+<li>Post-corona rejsevaner</li>
+</ul>
+<h3 id="prøveforløb">Prøveforløb:</h3>
+<ol>
+<li><strong>Lodtrækning:</strong> Vælg ét af de tre forberedte emner</li>
+<li><strong>Præsentation (5 minutter):</strong> Struktureret gennemgang af det valgte emne</li>
+<li><strong>Interview (15 minutter):</strong> Uddybende samtale med eksaminator baseret på præsentationen</li>
+<li><strong>Votering og karaktergivning (10 minutter)</strong></li>
+</ol>
+<h3 id="bedømmelseskriterier">Bedømmelseskriterier:</h3>
+<ul>
+<li><strong>Sproglig korrekthed:</strong> Grammatik, ordforråd og udtale</li>
+<li><strong>Kommunikativ kompetence:</strong> Evne til at formidle budskaber klart</li>
+<li><strong>Indholdsrigdom:</strong> Faglig dybde og nuanceret forståelse</li>
+<li><strong>Struktur:</strong> Logisk opbygning og sammenhæng</li>
+<li><strong>Interaktion:</strong> Evne til dialog og respons på spørgsmål</li>
+</ul>
+<hr>
+<p><em>This practice test was generated by Den Frie Prøvebank and is unofficial. Den Frie Prøvebank's ability to validate how well its tests match the official tests, in terms of content and structure, is limited. Users should seek guidance from official teaching institutions as to the structure and content of the exams in question.</em></p>
+
+	
+
+</body></html>
